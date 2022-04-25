@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <title>Base</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../css/Base.css">
+    <link rel="stylesheet" href="../css/Content.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+
+    <script src="../js/jquery-3.4.2.min.js"></script>
+    <script src="../js/jquery.throttle-debounce.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/Base.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            fnSlide({ dom: '.slide_aaa', loop: true, auto: true, center: false});
+            fnSlide({ dom: '.slide_bbb', loop: false, auto: true, center: false});/* breakPoint: ['t', 'm'] */
+            fnSlide({ dom: '.slide_ccc', loop: true, auto: true, center: false});
+            afterHasCheck('.aaa', domRatio, true, (3/4))
+            afterHasCheck('.bbb', domRatio, true, (9/16))
+        });
+        
+    </script>
+
+</head>
+<body>
+    <div class="lt_p">
+        <a href="" class="lt_l">asdaasdasdasdasdasdsdasdasdasd</a>
+        <div class="lt_c">asdasdasdasd</div>
+    </div>
+    <div class="lt_p">
+        <a href="" class="lt_l">asdaasdasdasdasdasdsdasdasdasd</a>
+        <div class="lt_c">asdasdasdasd</div>
+    </div>
+    <div class="lt_p">
+        <a href="" class="lt_l">asdaasdasdasdasdasdsdasdasdasd</a>
+        <div class="lt_c">asdasdasdasd</div>
+    </div>
+    <a href="" class="dt_l" data-target="dt_c1">asdasdasdasdasdasdasdasdasdas</a>
+    <div class="dt_c1"><a href="" class="btn_close">닫기</a>asdasdasdasdasdasdasd</div>
+    <a href="" class="dt_l" data-target="dt_c2">asdasdasdasdasdasdasdasdasdas</a>
+    <div class="dt_c2"><a href="" class="btn_close">닫기</a>asdasdasdasdasdasdasd</div>
+    <ul id="test1"></ul>
+    <ul id="test2"></ul>
+    <div class="s_check">
+        <div class="sc_p dp_n_t dp_n_m"><span class="hdn">너비 1180px 이상</span></div>
+        <div class="sc_t dp_n_p dp_n_m"><span class="hdn">너비 768px - 1179px</span></div>
+        <div class="sc_m dp_n_p dp_n_t"><span class="hdn">너비 767px 이하</span></div>
+    </div>
+    <style>
+        .slide_aaa, .slide_bbb {width:100%; overflow:hidden; font-size:0; line-height:0;}
+        .slide_aaa a, .slide_bbb a {display:block; font-size:20px; line-height:28px; font-weight:bold;}
+        .slide_aaa .s_w .sw_l,
+        .slide_bbb .s_w .sw_l {width:100%;}
+        .slide_ccc .s_w .sw_l {width:33.3333%;}
+    </style>
+    <a href="#">이전링크</a>
+    <div class="slide_aaa">
+        <div class="s_w">
+            <div class="sw_l"><a href="#">1</a></div>
+            <div class="sw_l"><a href="#">2</a></div>
+            <div class="sw_l"><a href="#">3</a></div>
+            <div class="sw_l"><a href="#">4</a></div>
+            <div class="sw_l"><a href="#">5</a></div>
+            <div class="sw_l"><a href="#">6</a></div>
+            <div class="sw_l"><a href="#">7</a></div>
+            <div class="sw_l"><a href="#">8</a></div>
+            <div class="sw_l"><a href="#">9</a></div>
+            <div class="sw_l"><a href="#">10</a></div>
+        </div>
+        <div class="s_c"><strong></strong><span></span></div>
+        <div class="s_p"></div>
+        <div class="s_b">
+            <a href="" class="btn_prev">prev</a>
+            <a href="" class="btn_pause">pause</a>
+            <a href="" class="btn_play">play</a>
+            <a href="" class="btn_next">next</a>
+        </div>
+    </div>
+    <a href="#">다음링크</a>
+    <a href="#">이전링크</a>
+    <div class="slide_bbb" style="position:relative; padding-bottom:100px;">
+        <div class="s_w">
+            <div class="sw_l"><a href="#">1</a></div>
+            <div class="sw_l"><a href="#">2</a></div>
+            <div class="sw_l"><a href="#">3</a></div>
+            <div class="sw_l"><a href="#">4</a></div>
+            <div class="sw_l"><a href="#">5</a></div>
+            <div class="sw_l"><a href="#">6</a></div>
+            <div class="sw_l"><a href="#">7</a></div>
+            <div class="sw_l"><a href="#">8</a></div>
+            <div class="sw_l"><a href="#">9</a></div>
+            <div class="sw_l"><a href="#">10</a></div>
+        </div>
+        <div style="position:absolute; left:0; bottom:0; width:100%;">
+            <div class="s_c"><strong></strong><span></span></div>
+            <div class="s_p"></div>
+            <div class="s_b">
+                <a href="" class="btn_prev">prev</a>
+                <a href="" class="btn_pause">pause</a>
+                <a href="" class="btn_play">play</a>
+                <a href="" class="btn_next">next</a>
+            </div>
+        </div>
+    </div>
+    <a href="#">다음링크</a>
+    <div class="slide_ccc">
+        <div class="s_w">
+            <div class="sw_l">1</div>
+            <div class="sw_l">1</div>
+            <div class="sw_l">1</div>
+            <div class="sw_l">1</div>
+            <div class="sw_l">1</div>
+            <div class="sw_l">1</div>
+            <div class="sw_l">1</div>
+            <div class="sw_l">1</div>
+            <div class="sw_l">1</div>
+        </div>
+        <div class="s_c"><strong></strong><span></span></div>
+        <div class="s_p"></div>
+        <div class="s_b">
+            <a href="" class="btn_prev">prev</a>
+            <a href="" class="btn_pause">pause</a>
+            <a href="" class="btn_play">play</a>
+            <a href="" class="btn_next">next</a>
+        </div>
+    </div>
+    <div class="d_tbl">
+        <div>sgSGSgS</div>
+        <div><div class="ib_w"><span>sgSrgSWRhgyWSRhyWSRh</span></div></div>
+    </div>
+    <div class="f_unit"><input type="text" name="" id=""><span class="f_txt">123123123123</span></div>
+    <div class="f_unit"><input type="text" name="" id=""><span class="f_txt">123123123</span></div>
+    <div class="form_area">
+        <ul>
+            <li><span class="fa_title">12312413423413</span></li>
+            <li><span class="fa_title">123124134</span></li>
+        </ul>
+    </div>
+    <div class="form_area">
+        <ul>
+            <li><span class="fa_title">12312413aafadssdfasdfadf423413</span></li>
+            <li><span class="fa_title">1231241asdfasdfafsd34</span></li>
+        </ul>
+    </div>
+    <div class="aaa" style="width:300px; background:red;"></div>
+    <div class="aaa" style="width:600px; background:blue;"></div>
+    <a href="" target="_blank">SgSWergSWRghSWRhRSHSR</a>
+
+    <div class="branch_list">
+        <ul>
+            <li><a>영월출장소</a></li>
+            <li><a>영월출장소</a></li>
+            <li><a>영월출장소</a></li>
+            <li><a>영월출장소</a></li>
+            <li><a>영월출장소</a></li>
+            <li><a>영월출장소</a></li>
+            <li><a>영월출장소</a></li>
+            <li><a>영월출장소</a></li>
+            <li><a>영월출장소</a></li>
+        </ul>
+    </div>
+
+    <p class="text_20 fw_b ta_c mg_t48">세션이 만료되었습니다.</p>
+    <p class="text_14 ta_c tc_888888">세션이 만료되었습니다.세션이 만료되었습니다.세션이 만료되었습니다.세션이 만료되었습니다.세션이 만료되었습니다.</p>
+    <div class="s_btn"><a href="" class="btn btn_sm btn_gray"><span>홈으로</span></a></div>
+
+    <h1 style="font-size:28px; line-height:36px; font-weight:700; padding:64px 0 16px 0;">Gallery List</h1>
+    <div class="event_banner_list">
+        <ul>
+            <li>
+                <div>
+                    <div class="ebl_img br_43"><img src="../image/ex_img.jpg" alt=""></div>
+                    <div class="ebl_descript">
+                        <div class="ebl_ttl">감염병 대응의 특수성과 전문성방역 컨트롤타워인 ‘중앙방역대책본부’(질병관리본부)</div>
+                        
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="ebl_img br_43"><img src="../image/ex_img.jpg" alt=""></div>
+                    <div class="ebl_descript">
+                        <div class="ebl_ttl">감염병 대응의 특수성과 전문성방역 컨트롤타워인 ‘중앙방역대책본부’(질병관리본부)방역 컨트롤타워인 ‘중앙방역대책본부’(질병관리본부)방역 컨트롤타워인 ‘중앙방역대책본부’(질병관리본부)</div>
+                        
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="ebl_img br_43"><img src="../image/ex_img.jpg" alt=""></div>
+                    <div class="ebl_descript">
+                        <div class="ebl_ttl">감염병 대응의 특수성과 전문성방역 컨트롤타워인 ‘중앙방역대책본부’(질병관리본부)방역 컨트롤타워인 ‘중앙방역대책본부’(질병관리본부)</div>
+                        
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="ebl_img br_43"><img src="../image/ex_img.jpg" alt=""></div>
+                    <div class="ebl_descript">
+                        <div class="ebl_ttl">감염병 대응의 특수성과 전문성</div>
+                        
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <h1 style="font-size:20px; line-height:28px; font-weight:bold; padding:32px 0 8px 0;">paging</h1>
+    <div class="paging">
+        <ul>
+            <li role="button" class="prev disabled"><span>이전</span></li><li role="button" class="page on"><span>1</span></li><li role="button" class="next disabled"><span>다음</span></li>
+        </ul>
+    </div>
+    <!-- <div class="paging">
+        <a href="" class="p_first" title="처음"><span class="hdn">처음페이지</span></a>
+        <a href="" class="p_prev" title="이전"><span class="hdn">이전페이지</span></a>
+        <strong>1</strong>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+        <a href="">5</a>
+        <a href="">6</a>
+        <a href="">7</a>
+        <a href="">8</a>
+        <a href="">9</a>
+        <a href="" class="p_next" title="다음"><span class="hdn">다음페이지</span></a>
+        <a href="" class="p_last" title="끝"><span class="hdn">끝페이지</span></a>
+    </div> -->
+
+    <h1 style="font-size:20px; line-height:28px; font-weight:bold; padding:32px 0 8px 0;">타이틀, 설명, 리스트</h1>
+
+    <span class="text_20 tc_323142 fw_b mg_t32">서브타이틀01 text_20 fw_b mg_t32</span>
+    <span class="text_14 tc_666666">국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</span>
+    <span class="text_18 tc_323142 fw_b mg_t24">서브타이틀02 text_18 fw_b mg_t24</span>
+    <span class="text_14 tc_666666">국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</span>
+    <span class="text_16 tc_323142 fw_b mg_t16">서브타이틀03 text_16 fw_b mg_t16</span>
+    <span class="text_14 tc_666666">국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</span>
+
+    <span class="text_20 tc_323142 fw_b mg_t32">서브타이틀01 text_20 fw_b mg_t32</span>
+    <span class="text_18 tc_323142 fw_b mg_t24">서브타이틀02 text_18 fw_b mg_t24</span>
+    <span class="text_16 tc_323142 fw_b mg_t16">서브타이틀03 text_16 fw_b mg_t16</span>
+
+    <span class="text_16 tc_666666">국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</span>
+    <span class="text_14 tc_666666">국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</span>
+    <span class="text_12 tc_666666">국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</span>
+
+    <ul class="list_14">
+        <li><i class="l_dot"></i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+        <li><i class="l_bar"></i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.
+            <ul>
+                <li><i class="l_dot"></i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+                <li><i class="l_bar"></i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+                <li><i class="l_txt">1.</i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+                <li><i class="l_txt">가.</i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+            </ul>
+        </li>
+        <li><i class="l_txt">1.</i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+        <li><i class="l_txt">가.</i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+    </ul>
+    <ul class="list_12">
+        <li><i class="l_dot"></i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+        <li><i class="l_bar"></i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.
+            <ul>
+                <li><i class="l_dot"></i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+                <li><i class="l_bar"></i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+                <li><i class="l_txt">1.</i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+                <li><i class="l_txt">가.</i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+            </ul>
+        </li>
+        <li><i class="l_txt">1.</i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+        <li><i class="l_txt">가.</i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+    </ul>
+
+    <span class="text_14 tc_666666 pd_l16"><i class="pg_ico">※</i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</span>
+    <span class="text_14 tc_666666 pd_l8"><i class="pg_ico_essential"></i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</span>
+    <span class="text_14 tc_666666">국민건강보험법 <span class="tc_f0666d">제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의</span>를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</span>
+    <span class="text_14 tc_666666">국민건강보험법 <span class="s_link_text">제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의</span>를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</span>
+    <span class="text_12 tc_666666 pd_l16"><i class="pg_ico">※</i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</span>
+    <span class="text_12 tc_666666 pd_l8"><i class="pg_ico_essential"></i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</span>
+    <span class="text_12 tc_666666">국민건강보험법 <span class="tc_f0666d">제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의</span>를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</span>
+    <span class="text_12 tc_666666">국민건강보험법 <span class="s_link_text">제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의</span>를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</span>
+
+    <div>
+        <a href="" class="btn btn_lg btn_gray"><span>버튼</span></a>
+        <a href="" class="btn btn_md btn_gray"><span>버튼</span></a>
+        <a href="" class="btn btn_sm btn_gray"><span>버튼</span></a>
+        <a href="" class="btn btn_xs btn_gray"><span>버튼</span></a>
+        <a href="" class="btn btn_xx btn_gray"><span>버튼</span></a>
+    </div>
+
+    <div class="d_tbl mg_t4">
+        <div>
+            <div><a href="" class="btn btn_sm btn_gray w_100p"><span>버튼</span></a></div>
+            <div><a href="" class="btn btn_sm btn_gray w_100p"><span>버튼</span></a></div>
+        </div>
+    </div>
+    <div class="d_tbl mg_t4">
+        <div>
+            <div><a href="" class="btn btn_sm btn_gray w_100p"><span>버튼</span></a></div>
+        </div>
+    </div>
+
+    <div class="s_btn dlr_va_m">
+        <div>
+            <a href="" class="btn btn_sm btn_gray"><span>버튼</span></a>
+        </div>
+        <a href="" class="btn btn_sm btn_gray"><span>버튼</span></a>
+        <div>
+            <a href="" class="btn btn_sm btn_gray"><span>버튼</span></a>
+        </div>
+    </div>
+
+    <h1 style="font-size:20px; line-height:28px; font-weight:bold; padding:32px 0 8px 0;">영역상단 - s_top</h1>
+
+    <div class="s_top pd_none dlr_va_m">
+        <div>
+            <span class="text_20 tc_323142 fw_b">타이틀1</span>
+            <span class="text_18 tc_323142 fw_b">타이틀2</span>
+            <span class="text_16 tc_323142 fw_b">타이틀2</span>
+            <p class="st_count"><span>총</span><strong>45635</strong><span>건</span></p>
+        </div>
+        <div>
+            <div class="guide_tgl"><i></i></div>
+            <a href="" class="btn_more"><span>더보기</span></a>
+        </div>
+    </div>
+
+    <div class="s_top pd_none dlr_va_m">
+        <div>
+            <p class="text_14 pd_l8"><i class="pg_ico_essential"></i>필수항목</p>
+            <span class="st_alert">54674567</span>
+        </div>
+        <div>
+            <div class="form_xs">
+                <div class="f_check"><input type="checkbox" id="c14"><label for="c14" class="f_txt"><i></i>전체선택</label></div>
+            </div>
+            <div class="form_xs">
+                <select><option value="">2018년</option></select>
+            </div>
+        </div>
+    </div>
+
+    <h1 style="font-size:20px; line-height:28px; font-weight:bold; padding:32px 0 8px 0;">표 - data_table</h1>
+
+    <!-- <div class="data_table_14">
+        <table class="table_h thbg mg_t8">
+            <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>
+           </colgroup>
+           <thead>
+               <tr>
+                   <th scope="col" rowspan="2">가구원수</th>
+                   <th scope="col" colspan="3">가구별 건강보험료 본인부담금 합산액(원)</th>
+               </tr>
+               <tr>
+                    <th scope="col">직장</th>
+                    <th scope="col">지역</th>
+                    <th scope="col">혼합</th>
+               </tr>
+           </thead>
+           <tbody>				
+
+                <tr>
+                    <th>1인</th>
+                    <td>170,000</td>
+                    <td>170,000</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th>2인</th>
+                    <td>200,000</td>
+                    <td>210,000</td>
+                    <td>200,000</td>
+                </tr>
+                <tr>
+                    <th>3인</th>
+                    <td>250,000</td>
+                    <td>280,000</td>
+                    <td>260,000</td>
+                </tr>
+                <tr>
+                    <th>4인</th>
+                    <td>310,000</td>
+                    <td>350,000</td>
+                    <td>330,000</td>
+                </tr>
+                <tr>
+                    <th>5인</th>
+                    <td>390,000</td>
+                    <td>430,000</td>
+                    <td>420,000</td>
+                </tr>
+                <tr>
+                    <th>6인</th>
+                    <td>420,000</td>
+                    <td>460,000</td>
+                    <td>450,000</td>
+                </tr>
+                <tr>
+                    <th>7인</th>
+                    <td>490,000</td>
+                    <td>540,000</td>
+                    <td>550,000</td>
+                </tr>
+                <tr>
+                    <th>8인</th>
+                    <td>550,000</td>
+                    <td>590,000</td>
+                    <td>640,000</td>
+                </tr>
+                <tr>
+                    <th>9인</th>
+                    <td>640,000</td>
+                    <td>670,000</td>
+                    <td>820,000</td>
+                </tr>
+                <tr>
+                    <th>10인</a></th>
+                    <td><a href="" class="btn btn_xx btn_gray"><span>640,000</span></a></td>
+                    <td><a href="" class="btn btn_xx btn_gray"><span>670,000</span></a></td>
+                    <td><a href="" class="btn btn_xx btn_gray"><span>820,000</span></a></td>
+                </tr>
+           </tbody>
+       </table>
+    </div> -->
+
+    <div class="data_table_12">
+        <table class="table_h thbg mg_t8">
+            <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>
+           </colgroup>
+           <thead>
+               <tr>
+                   <th scope="col" rowspan="2">가구원수</th>
+                   <th scope="col" colspan="3">가구별 건강보험료 본인부담금 합산액(원)</th>
+               </tr>
+               <tr>
+                    <th scope="col">직장</th>
+                    <th scope="col">지역</th>
+                    <th scope="col">혼합</th>
+               </tr>
+           </thead>
+           <tbody>				
+
+                <tr>
+                    <th>1인</th>
+                    <td>170,000</td>
+                    <td>170,000</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th>2인</th>
+                    <td>200,000</td>
+                    <td>210,000</td>
+                    <td>200,000</td>
+                </tr>
+                <tr>
+                    <th>3인</th>
+                    <td>250,000</td>
+                    <td>280,000</td>
+                    <td>260,000</td>
+                </tr>
+                <tr>
+                    <th>4인</th>
+                    <td>310,000</td>
+                    <td>350,000</td>
+                    <td>330,000</td>
+                </tr>
+                <tr>
+                    <th>5인</th>
+                    <td>390,000</td>
+                    <td>430,000</td>
+                    <td>420,000</td>
+                </tr>
+                <tr>
+                    <th>6인</th>
+                    <td>420,000</td>
+                    <td>460,000</td>
+                    <td>450,000</td>
+                </tr>
+                <tr>
+                    <th>7인</th>
+                    <td>490,000</td>
+                    <td>540,000</td>
+                    <td>550,000</td>
+                </tr>
+                <tr>
+                    <th>8인</th>
+                    <td>550,000</td>
+                    <td>590,000</td>
+                    <td>640,000</td>
+                </tr>
+                <tr>
+                    <th>9인</th>
+                    <td>640,000</td>
+                    <td>670,000</td>
+                    <td>820,000</td>
+                </tr>
+                <tr>
+                    <th>10인</a></th>
+                    <td><a href="" class="btn btn_xx btn_gray"><span>640,000</span></a></td>
+                    <td><a href="" class="btn btn_xx btn_gray"><span>670,000</span></a></td>
+                    <td><a href="" class="btn btn_xx btn_gray"><span>820,000</span></a></td>
+                </tr>
+           </tbody>
+       </table>
+    </div>
+
+    <div class='data_table_12'><table><colgroup><col></colgroup><tbody><tr><td><p class='no_list'>
+        조회된 게시물이 없습니다.
+        
+    </p></td></tr></tbody></table></div>
+
+    <h1 style="font-size:20px; line-height:28px; font-weight:bold; padding:32px 0 8px 0;">탭 - s_tab</h1>
+
+    <div class="s_tab">
+        <ul>
+            <li><a href="">서브타이틀</a></li>
+            <li class="on"><a href="">서브타이틀타이틀</a></li>
+            <li><a href="">서브타이틀</a></li>
+        </ul>
+    </div>
+    <div class="s_tab_sub">
+        <ul>
+            <li><a href="">서브타이틀</a></li>
+            <li class="on"><a href="">서브타이틀타이틀타이틀</a></li>
+            <li><a href="">서브타이틀타이틀</a></li>
+            <li><a href="">서브타이틀타이틀</a></li>
+            <li><a href="">서브타이틀타이틀</a></li>
+            <li><a href="">서브타이틀타이틀</a></li>
+            <li><a href="">서브타이틀타이틀</a></li>
+        </ul>
+    </div>
+
+    
+
+    <h1 style="font-size:20px; line-height:28px; font-weight:bold; padding:32px 0 8px 0;">게시판 하단버튼 - form_area</h1>
+
+    <div class="s_btn">
+        <div class="fl_l"><a href="" class="btn btn_sm btn_gray"><span>목록</span></a></div>
+        <div class="fl_r"><a href="" class="btn btn_sm btn_gray"><span>목록</span></a></div>
+    </div>
+
+    <h1 style="font-size:20px; line-height:28px; font-weight:bold; padding:32px 0 8px 0;">버튼영역 - form_area</h1>
+
+    <div class="t_btn">
+        <div class="d_tbl">
+            <div><a href="" class="btn btn_sm btn_gray w_100p"><span>목록</span></a></div>
+        </div>
+    </div>
+
+    <div class="t_btn">
+        <div class="d_tbl">
+            <div><a href="" class="btn btn_sm btn_gray w_100p"><span>목록</span></a></div>
+            <div><a href="" class="btn btn_sm btn_gray w_100p"><span>목록</span></a></div>
+        </div>
+    </div>
+
+    <h1 style="font-size:20px; line-height:28px; font-weight:bold; padding:32px 0 8px 0;">입력폼 - form_area</h1>
+
+    <div class="form_area form_sm">
+        <ul>
+            <li>
+                <div class="f_check"><input type="checkbox" id="c14"><label for="c14" class="f_txt"><i></i>체크박스</label></div>
+            </li>
+            <li>
+                <div class="f_radio"><input type="radio" id="r14"><label for="r14" class="f_txt"><i></i>체크박스</label></div>
+            </li>
+            <li>
+                <input type="text" placeholder="777777-7777777">
+                <div class="f_check"><input type="checkbox" id="c14"><label for="c14" class="f_txt"><i></i>체크박스</label></div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="form_area form_sm pd_none">
+        <ul>
+            <li>
+                <span class="fa_title"><i class="ico_essential"></i>주민등록번호</span>
+                <div class="f_check"><input type="checkbox" id="c14"><label for="c14" class="f_txt"><i></i>체크박스</label></div>
+            </li>
+            <li>
+                <span class="fa_title"><i class="ico_essential"></i>주민등</span>
+                <div class="f_radio"><input type="radio" id="r14"><label for="r14" class="f_txt"><i></i>체크박스</label></div>
+            </li>
+            <li>
+                <span class="fa_title">주민등록번호주민등록</span>
+                <input type="text" placeholder="생년월일 8자리를 입력해주세요. 예) 19890101">
+                <div class="f_check"><input type="checkbox" id="c14"><label for="c14" class="f_txt"><i></i>체크박스</label></div>
+            </li>
+            <li>
+                <span class="fa_title">주민등록</span>
+                <select><option value="">엑셀파일 다운로드</option></select>
+                <p class="s_descript_12 s_alert mg_t4"><i class="sa_ico">※</i>생년월일 8자리를 입력해주세요. 예) 19890101</p>
+            </li>
+            <li>
+                <span class="fa_title">주민등록번호</span>
+                <textarea placeholder="엑셀파일 다운로드"></textarea>
+            </li>
+            <li>
+                <span class="fa_title">주민등록번호</span>
+                <div class="f_srch"><input type="text" placeholder="엑셀파일 다운로드"><a href="" class="btn_search"></a></div>
+            </li>
+            <li>
+                <span class="fa_title">주민등</span>
+                <div class="f_unit"><input type="text" placeholder="456735683583457"><span class="f_txt">달러</span></div>
+            </li>
+            <li>
+                <span class="fa_title">주민등록번호주민등록</span>
+                <div class="d_tbl">
+                    <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+                    <div class="pd_l4"><div class="ib_w"><a href="" class="btn btn_sm btn_gray"><span>엑셀파일 다운로드</span></a></div></div>
+                </div>
+            </li>
+            <li>
+                <span class="fa_title">주민등록</span>
+                <div class="d_tbl">
+                    <div><div class="f_unit"><input type="text" placeholder="456735683583457"><span class="f_txt">달러</span></div></div>
+                    <div class="f_tbl_dash">~</div>
+                    <div><div class="f_unit"><input type="text" placeholder="456735683583457"><span class="f_txt">달러</span></div></div>
+                </div>
+            </li>
+            <li>
+                <span class="fa_title">주민등록번호</span>
+                <div class="d_tbl">
+                    <div><div class="f_srch"><input type="text" placeholder="엑셀파일 다운로드"><a href="" class="btn_search"></a></div></div>
+                    <div class="f_tbl_dash">~</div>
+                    <div><div class="f_srch"><input type="text" placeholder="엑셀파일 다운로드"><a href="" class="btn_search"></a></div></div>
+                </div>
+            </li>
+            <li>
+                <span class="fa_title">주민등록</span>
+                <div class="d_tbl">
+                    <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+                    <div class="f_tbl_dash">~</div>
+                    <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+                </div>
+            </li>
+            <li>
+                <span class="fa_title">주민등록번호</span>
+                <div class="f_onoff"><input type="checkbox" id="c04"><label for="c04"></label></div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="form_area form_xs">
+        <ul>
+            <li>
+                <div class="f_check"><input type="checkbox" id="c14"><label for="c14" class="f_txt"><i></i>체크박스</label></div>
+            </li>
+            <li>
+                <div class="f_radio"><input type="radio" id="r14"><label for="r14" class="f_txt"><i></i>체크박스</label></div>
+            </li>
+            <li>
+                <input type="text" placeholder="엑셀파일 다운로드">
+                <div class="f_check"><input type="checkbox" id="c14"><label for="c14" class="f_txt"><i></i>체크박스</label></div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="form_area form_xs">
+        <ul>
+            <li>
+                <span class="fa_title"><i class="ico_essential"></i>주민등록번호</span>
+                <div class="f_check"><input type="checkbox" id="c14"><label for="c14" class="f_txt"><i></i>체크박스</label></div>
+            </li>
+            <li>
+                <span class="fa_title"><i class="ico_essential"></i>주민등</span>
+                <div class="f_radio"><input type="radio" id="r14"><label for="r14" class="f_txt"><i></i>체크박스</label></div>
+            </li>
+            <li>
+                <span class="fa_title">주민등록번호주민등록</span>
+                <input type="text" placeholder="엑셀파일 다운로드">
+                <div class="f_check"><input type="checkbox" id="c14"><label for="c14" class="f_txt"><i></i>체크박스</label></div>
+            </li>
+            <li>
+                <span class="fa_title">주민등록</span>
+                <select><option value="">엑셀파일 다운로드</option></select>
+            </li>
+            <li>
+                <span class="fa_title">주민등록번호</span>
+                <textarea placeholder="엑셀파일 다운로드"></textarea>
+            </li>
+            <li>
+                <span class="fa_title">주민등록번호</span>
+                <div class="f_srch"><input type="text" placeholder="엑셀파일 다운로드"><a href="" class="btn_search"></a></div>
+            </li>
+            <li>
+                <span class="fa_title">주민등</span>
+                <div class="f_unit"><input type="text" placeholder="456735683583457"><span class="f_txt">달러</span></div>
+            </li>
+            <li>
+                <span class="fa_title">주민등록번호주민등록</span>
+                <div class="d_tbl">
+                    <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+                    <div class="pd_l4"><div class="ib_w"><a href="" class="btn btn_xs btn_gray"><span>엑셀파일 다운로드</span></a></div></div>
+                </div>
+            </li>
+            <li>
+                <span class="fa_title">주민등록</span>
+                <div class="d_tbl">
+                    <div><div class="f_unit"><input type="text" placeholder="456735683583457"><span class="f_txt">달러</span></div></div>
+                    <div class="f_tbl_dash">~</div>
+                    <div><div class="f_unit"><input type="text" placeholder="456735683583457"><span class="f_txt">달러</span></div></div>
+                </div>
+            </li>
+            <li>
+                <span class="fa_title">주민등록번호</span>
+                <div class="d_tbl">
+                    <div><div class="f_srch"><input type="text" placeholder="엑셀파일 다운로드"><a href="" class="btn_search"></a></div></div>
+                    <div class="f_tbl_dash">~</div>
+                    <div><div class="f_srch"><input type="text" placeholder="엑셀파일 다운로드"><a href="" class="btn_search"></a></div></div>
+                </div>
+            </li>
+            <li>
+                <span class="fa_title">주민등록</span>
+                <div class="d_tbl">
+                    <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+                    <div class="f_tbl_dash">~</div>
+                    <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+                </div>
+            </li>
+            <li>
+                <span class="fa_title">주민등록번호</span>
+                <div class="f_onoff"><input type="checkbox" id="c04"><label for="c04"></label></div>
+            </li>
+        </ul>
+    </div>
+
+    <h1 style="font-size:20px; line-height:28px; font-weight:bold; padding:32px 0 8px 0;">안내영역 - box_guide</h1>
+
+    <div class="box_guide_line">
+        <div class="bl_t dlr_va_m">
+            <div class="fl_l"><span class="text_16 fw_b">개인정보수집 및 이용동의</span></div>
+            <div class="fl_r">
+                <div class="form_sm"><div class="f_onoff"><input type="checkbox" id="c04"><label for="c04"></label></div></div>
+            </div>
+        </div>
+        <div class="bl_c">
+
+            <ul class="list_12 mg_t0">
+                <li><i class="l_dot"></i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+                <li><i class="l_bar"></i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+                <li><i class="l_txt">1</i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+                <li><i class="l_txt">국</i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+            </ul>
+
+        </div>
+        <div class="bl_b dlr_va_m">
+            <div class="fl_r">
+                <div class="form_sm">
+                    <div class="f_radio"><input type="radio" name="" id=""><label for="" class="f_txt"><i></i>동의함</label></div>
+                    <div class="f_radio mg_l16"><input type="radio" name="" id=""><label for="" class="f_txt"><i></i>동의안함</label></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="box_guide lt_p">
+        <a class="lt_l"></a>
+        <div>
+            <!-- <h4 class="s_title03">서비스 신청 및 등록번호 변경(해지) 신청안내</h4> -->
+            <ul class="list_12 mg_t0">
+                <li><i class="l_dot"></i> 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="box_guide lt_p">
+        <a class="lt_l"></a>
+        <div>
+            <!-- <h4 class="s_title03">서비스 신청 및 등록번호 변경(해지) 신청안내</h4> -->
+            <ul class="list_12 mg_t0">
+                <li><i class="l_dot"></i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+                <li><i class="l_bar"></i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.
+                    <ul>
+                        <li><i class="l_dot"></i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+                        <li><i class="l_bar"></i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+                        <li><i class="l_txt">1</i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+                        <li><i class="l_txt">국</i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+                    </ul>
+                </li>
+                <li><i class="l_txt">1</i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+                <li><i class="l_txt">국</i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="box_guide lt_p">
+        <a class="lt_l"></a>
+        <div>
+            <h4 class="s_title03">서비스 신청 및 등록번호 변경(해지) 신청안내</h4>
+            <ul class="list_12">
+                <li><i class="l_dot"></i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+                <li><i class="l_bar"></i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.
+                    <ul>
+                        <li><i class="l_dot"></i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+                        <li><i class="l_bar"></i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+                        <li><i class="l_txt">1</i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+                        <li><i class="l_txt">국</i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+                    </ul>
+                </li>
+                <li><i class="l_txt">1</i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+                <li><i class="l_txt">국</i>국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.국민건강보험법 제14조 및 동법 시행령 제81조에 따라 인증 로그인 시 개인정보 동의를 한 것으로 간주하여 서비스를 제공합니다.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="box_guide02 lt_p">
+        <div class="bg_t"><span>안내사항</span><a href="" class="lt_l"><span class="txt_open">더보기</span><span class="txt_close">닫기</span></a></div>
+        <ul class="list_12 tc_888888">
+            <li><i class="l_dot"></i>군복무 및 수용기간 급여정지 사항은 고객센터(<a class="s_link_text" href="telto:1577-1000" title="전화걸기"><strong>1577-1000</strong></a>)로 문의하시기 바랍니다.</li>
+            <li><i class="l_dot"></i>급여정지 사항은 본인 내역만 제공됩니다.</li>
+            <li><i class="l_dot"></i>타인명의 도용과 같은 부정한 방법에 의하여 개인정보를 침해 또는 누설하는 경우 관련법에 의해 처벌을 받습니다. (홈페이지 회원약관 – 제12조, 제13조 회원의 의무와 책임)</li>
+        </ul>
+        <div class="lt_c">
+            <ul class="list_12 mg_t0 tc_888888">
+                <li><i class="l_dot"></i>군복무 및 수용기간 급여정지 사항은 고객센터(<a class="s_link_text" href="telto:1577-1000" title="전화걸기"><strong>1577-1000</strong></a>)로 문의하시기 바랍니다.</li>
+                <li><i class="l_dot"></i>급여정지 사항은 본인 내역만 제공됩니다.</li>
+                <li><i class="l_dot"></i>타인명의 도용과 같은 부정한 방법에 의하여 개인정보를 침해 또는 누설하는 경우 관련법에 의해 처벌을 받습니다. (홈페이지 회원약관 – 제12조, 제13조 회원의 의무와 책임)</li>
+            </ul>
+        </div>
+    </div>
+
+    <h1 style="font-size:20px; line-height:28px; font-weight:bold; padding:32px 0 8px 0;">조회목록 - inquiry_list01</h1>
+    
+    <div class="inquiry_list01">
+        <ul>
+            <li>
+                <div class="lt_p">
+                    <a class="lt_l"></a>
+                    <div class="lt_c">
+                        <div class="il_t">
+                            <div class="fl_l">
+                                <span class="il_num">01</span>
+                            </div>
+                            <div class="fl_r">
+                                <div class="form_sm">
+                                    <div class="f_radio"><input type="radio" id="c14"><label for="c14" class="f_txt"><i></i>맞음</label></div>
+                                    <div class="f_radio mg_l8"><input type="radio" id="c14"><label for="c14" class="f_txt"><i></i>다름</label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="il_b">
+                            <div class="il_class02 form_xs">
+                                <ul>
+                                    <li><span>제목</span><strong>서브타이틀서브타<i class="ico_guide">!</i></strong></li>
+                                    <li><span>제목제목제목</span><strong>2000-00-00</strong></li>
+                                    <li><span>제목제목<i class="ico_guide">!</i></span><strong>서브타이이틀</strong></li>
+                                    <li><span>제목</span><strong>서브타이틀서브타이틀</strong></li>
+                                    <li><span>제목제목제목</span><strong>2000-00-00</strong></li>
+                                    <li><span>제목제목</span><strong><div class="f_radio"><input type="radio" id="r14"><label for="r14" class="f_txt"><i></i>체크박스</label></div></strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a class="btn btn_sm btn_navy w_100p mg_t4"><span>버튼</span></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="il_t">
+                        <div class="fl_l">
+                            <span class="il_num">01</span>
+                            <span class="text_16 fw_b tc_323142">서브타이틀</span>
+                            <i class="ico_guide">!</i>
+                        </div>
+                        <div class="fl_r">
+                            <span class="text_14 fw_b tc_323142"><a href="" class="s_link_text">상세정보보기</a></span>
+                            <div class="form_sm">
+                                <div class="f_check"><input type="checkbox" id="c14"><label for="c14" class="f_txt"><i></i></label></div>
+                            </div>
+                            <i class="ico_guide">!</i>
+                        </div>
+                    </div>
+                    <div class="il_b">
+                        <div class="il_class02 form_xs">
+                            <ul>
+                                <li><span>제목</span><strong>서브타이틀서브타<i class="ico_guide">!</i></strong></li>
+                                <li><span>제목제목제목</span><strong>2000-00-00</strong></li>
+                                <li><span>제목제목<i class="ico_guide">!</i></span><strong>서브타이이틀</strong></li>
+                                <li><span>제목</span><strong>서브타이틀서브타이틀</strong></li>
+                                <li><span>제목제목제목</span><strong>2000-00-00</strong></li>
+                                <li><span>제목제목</span><strong><div class="f_radio"><input type="radio" id="r14"><label for="r14" class="f_txt"><i></i>체크박스</label></div></strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a class="btn btn_sm btn_navy w_100p mg_t4"><span>버튼</span></a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="il_t">
+                        <div class="fl_l">
+                            <span class="il_num">02</span>
+                            <span class="text_16 fw_b tc_323142">서브타이틀</span>
+                            <div class="il_process">
+                                <ul>
+                                    <li><span>처리중</span></li>
+                                    <li><span>처리중</span></li>
+                                    <li class="on"><span>처리중</span></li>
+                                    <li><span>처리중</span></li>
+                                    <li><span>처리중</span></li>
+                                </ul>
+                            </div>
+                            <i class="ico_guide">!</i>
+                        </div>
+                        <div class="fl_r">
+                            <div class="form_sm">
+                                <div class="f_check"><input type="checkbox" id="c14"><label for="c14" class="f_txt"><i></i></label></div>
+                            </div>
+                            <i class="ico_guide">!</i>
+                        </div>
+                    </div>
+                    <div class="il_b">
+                        <div class="il_class02">
+                            <ul>
+                                <li><span>제목<i class="ico_guide">!</i></span><strong>서브타이틀서브타<i class="ico_guide">!</i></strong></li>
+                                <li><span>제목제목제목</span><strong>2000-00-00</strong></li>
+                                <li><span>제목제목</span><strong>서브타이이틀</strong></li>
+                                <li><span>제목</span><strong>서브타이틀서브타이틀</strong></li>
+                                <li><span>제목제목제목</span><strong>2000-00-00</strong></li>
+                                <li><span>제목제목</span><strong><a href="" class="s_link_text">상세정보보기</a></strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="inquiry_list01"><p class="no_list">조회된 결과가 없습니다</p></div>
+
+    <h1 style="font-size:20px; line-height:28px; font-weight:bold; padding:32px 0 8px 0;">게시판상세 - board_view01</h1>
+
+    <div class="board_view01">
+        <div class="bv_t">
+            <span class="bv_tag">자격</span>
+            <strong class="bv_title">외국인, 재외국민의 지역 자격취득은 어떻게 하나요?</strong>
+            <p class="bv_field"><span>조회수 1,739</span><span>조회수 1,739</span></p>
+        </div>
+        <div class="bv_c">
+            <p class="s_descript_14 tc_757480 mg_t0">국내에 입국한 날로부터 6개월이 경과한 날(유학 결혼의 사유로 6개월 이상 거주할 것이 명백한 자는 국내에 입국한 날)로 자격취득이 가능합니다.</p>
+            <ul class="list_14 tc_757480">
+                <li><i class="l_dot"></i>국내에 입국한 날로부터 6개월이 경과한 날(유학 결혼의 사유로 6개월 이상 거주할 것이 명백한 자는 국내에 입국한 날)로 자격취득이 가능합니다.</li>
+                <li><i class="l_dot"></i>국내에 입국한 날로부터 6개월이 경과한 날(유학 결혼의 사유로 6개월 이상 거주할 것이 명백한 자는 국내에 입국한 날)로 자격취득이 가능합니다.</li>
+                <li><i class="l_dot"></i>국내에 입국한 날로부터 6개월이 경과한 날(유학 결혼의 사유로 6개월 이상 거주할 것이 명백한 자는 국내에 입국한 날)로 자격취득이 가능합니다.</li>
+                <li><i class="l_dot"></i>국내에 입국한 날로부터 6개월이 경과한 날(유학 결혼의 사유로 6개월 이상 거주할 것이 명백한 자는 국내에 입국한 날)로 자격취득이 가능합니다.</li>
+                <li><i class="l_dot"></i>국내에 입국한 날로부터 6개월이 경과한 날(유학 결혼의 사유로 6개월 이상 거주할 것이 명백한 자는 국내에 입국한 날)로 자격취득이 가능합니다.</li>
+                <li><i class="l_dot"></i>국내에 입국한 날로부터 6개월이 경과한 날(유학 결혼의 사유로 6개월 이상 거주할 것이 명백한 자는 국내에 입국한 날)로 자격취득이 가능합니다.</li>
+                <li><i class="l_dot"></i>국내에 입국한 날로부터 6개월이 경과한 날(유학 결혼의 사유로 6개월 이상 거주할 것이 명백한 자는 국내에 입국한 날)로 자격취득이 가능합니다.</li>
+                <li><i class="l_dot"></i>국내에 입국한 날로부터 6개월이 경과한 날(유학 결혼의 사유로 6개월 이상 거주할 것이 명백한 자는 국내에 입국한 날)로 자격취득이 가능합니다.</li>
+                <li><i class="l_dot"></i>국내에 입국한 날로부터 6개월이 경과한 날(유학 결혼의 사유로 6개월 이상 거주할 것이 명백한 자는 국내에 입국한 날)로 자격취득이 가능합니다.</li>
+                <li><i class="l_dot"></i>국내에 입국한 날로부터 6개월이 경과한 날(유학 결혼의 사유로 6개월 이상 거주할 것이 명백한 자는 국내에 입국한 날)로 자격취득이 가능합니다.</li>
+                <li><i class="l_dot"></i>국내에 입국한 날로부터 6개월이 경과한 날(유학 결혼의 사유로 6개월 이상 거주할 것이 명백한 자는 국내에 입국한 날)로 자격취득이 가능합니다.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="height:1000px;"></div>
+
+    <div class="pd_tb80 form_lg">
+        <div class="f_check"><input type="checkbox" id="c11"><label for="c11" class="f_txt"><i></i>체크박스</label></div>
+        <div class="f_radio"><input type="radio" id="r11"><label for="r11" class="f_txt"><i></i>체크박스</label></div>
+        <input type="text" placeholder="엑셀파일 다운로드">
+        <input type="password" placeholder="엑셀파일 다운로드">
+        <input type="date" placeholder="엑셀파일 다운로드">
+        <input type="number" placeholder="엑셀파일 다운로드">
+        <select><option value="">엑셀파일 다운로드</option></select>
+        <textarea placeholder="엑셀파일 다운로드"></textarea>
+        <div class="f_srch"><input type="text" placeholder="엑셀파일 다운로드"><a href="" class="btn_search"></a></div>
+        <div class="f_unit"><input type="text" placeholder="456735683583457"><span class="f_txt">달러</span></div>
+        <div class="d_tbl">
+            <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+            <div><div class="ib_w"><a href="" class="btn btn_lg btn_gray"><span>엑셀파일 다운로드</span></a></div></div>
+        </div>
+        <div class="d_tbl">
+            <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+            <div><div class="ib_w"><span class="f_txt">원</span></div></div>
+        </div>
+        <div class="d_tbl">
+            <div><div class="d_tbl"><div><input type="text" placeholder="엑셀파일 다운로드"></div><div><div class="ib_w"><span class="f_txt">원</span></div></div></div></div>
+            <div class="f_tbl_dash">~</div>
+            <div><div class="d_tbl"><div><input type="text" placeholder="엑셀파일 다운로드"></div><div><div class="ib_w"><span class="f_txt">원</span></div></div></div></div>
+        </div>
+        <div class="d_tbl">
+            <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+            <div class="f_tbl_dash">~</div>
+            <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+        </div>
+        <div class="d_tbl">
+            <div><div class="f_srch"><input type="text" placeholder="엑셀파일 다운로드"><a href="" class="btn_search"></a></div></div>
+            <div class="f_tbl_dash">~</div>
+            <div><div class="f_srch"><input type="text" placeholder="엑셀파일 다운로드"><a href="" class="btn_search"></a></div></div>
+        </div>
+        <div class="l_ib_t_">
+            <div><div class="ib_w"><span class="f_txt">라벨제목</span></div></div>
+            <div><select><option value="">엑셀파일 다운로드</option></select></div>
+            <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+            <div><div class="ib_w"><a href="" class="btn btn_lg btn_gray"><span>검색</span></a></div></div>
+        </div>
+        <div class="f_onoff"><input type="checkbox" id="c01"><label for="c01"></label></div>
+    </div>
+
+    <div class="pd_tb80 form_md">
+        <div class="f_check"><input type="checkbox" id="c12"><label for="c12" class="f_txt"><i></i>체크박스</label></div>
+        <div class="f_radio"><input type="radio" id="r12"><label for="r12" class="f_txt"><i></i>체크박스</label></div>
+        <input type="text" placeholder="엑셀파일 다운로드">
+        <input type="password" placeholder="엑셀파일 다운로드">
+        <input type="date" placeholder="엑셀파일 다운로드">
+        <input type="number" placeholder="엑셀파일 다운로드">
+        <select><option value="">엑셀파일 다운로드</option></select>
+        <textarea placeholder="엑셀파일 다운로드"></textarea>
+        <div class="f_srch"><input type="text" placeholder="엑셀파일 다운로드"><a href="" class="btn_search"></a></div>
+        <div class="f_unit"><input type="text" placeholder="456735683583457"><span class="f_txt">달러</span></div>
+        <div class="d_tbl">
+            <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+            <div><div class="ib_w"><a href="" class="btn btn_md btn_gray"><span>엑셀파일 다운로드</span></a></div></div>
+        </div>
+        <div class="d_tbl">
+            <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+            <div><div class="ib_w"><span class="f_txt">원</span></div></div>
+        </div>
+        <div class="d_tbl">
+            <div><div class="d_tbl"><div><input type="text" placeholder="엑셀파일 다운로드"></div><div><div class="ib_w"><span class="f_txt">원</span></div></div></div></div>
+            <div class="f_tbl_dash">~</div>
+            <div><div class="d_tbl"><div><input type="text" placeholder="엑셀파일 다운로드"></div><div><div class="ib_w"><span class="f_txt">원</span></div></div></div></div>
+        </div>
+        <div class="d_tbl">
+            <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+            <div class="f_tbl_dash">~</div>
+            <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+        </div>
+        <div class="d_tbl">
+            <div><div class="f_srch"><input type="text" placeholder="엑셀파일 다운로드"><a href="" class="btn_search"></a></div></div>
+            <div class="f_tbl_dash">~</div>
+            <div><div class="f_srch"><input type="text" placeholder="엑셀파일 다운로드"><a href="" class="btn_search"></a></div></div>
+        </div>
+        <div class="l_ib_t_">
+            <div><div class="ib_w"><span class="f_txt">라벨제목</span></div></div>
+            <div><select><option value="">엑셀파일 다운로드</option></select></div>
+            <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+            <div><div class="ib_w"><a href="" class="btn btn_md btn_gray"><span>검색</span></a></div></div>
+        </div>
+        <div class="f_onoff"><input type="checkbox" id="c02"><label for="c02"></label></div>
+    </div>
+
+    <div class="pd_tb80 form_sm">
+        <div class="f_check"><input type="checkbox" id="c13"><label for="c13" class="f_txt"><i></i>체크박스</label></div>
+        <div class="f_radio"><input type="radio" id="r13"><label for="r13" class="f_txt"><i></i>체크박스</label></div>
+        <input type="text" placeholder="엑셀파일 다운로드">
+        <input type="password" placeholder="엑셀파일 다운로드">
+        <input type="date" placeholder="엑셀파일 다운로드">
+        <input type="number" placeholder="엑셀파일 다운로드">
+        <select><option value="">엑셀파일 다운로드</option></select>
+        <textarea placeholder="엑셀파일 다운로드"></textarea>
+        <div class="f_srch"><input type="text" placeholder="엑셀파일 다운로드"><a href="" class="btn_search"></a></div>
+        <div class="f_unit"><input type="text" placeholder="456735683583457"><span class="f_txt">달러</span></div>
+        <div class="d_tbl">
+            <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+            <div><div class="ib_w"><a href="" class="btn btn_sm btn_gray"><span>엑셀파일 다운로드</span></a></div></div>
+        </div>
+        <div class="d_tbl">
+            <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+            <div><div class="ib_w"><span class="f_txt">원</span></div></div>
+        </div>
+        <div class="d_tbl">
+            <div><div class="d_tbl"><div><input type="text" placeholder="엑셀파일 다운로드"></div><div><div class="ib_w"><span class="f_txt">원</span></div></div></div></div>
+            <div class="f_tbl_dash">~</div>
+            <div><div class="d_tbl"><div><input type="text" placeholder="엑셀파일 다운로드"></div><div><div class="ib_w"><span class="f_txt">원</span></div></div></div></div>
+        </div>
+        <div class="d_tbl">
+            <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+            <div class="f_tbl_dash">~</div>
+            <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+        </div>
+        <div class="d_tbl">
+            <div><div class="f_srch"><input type="text" placeholder="엑셀파일 다운로드"><a href="" class="btn_search"></a></div></div>
+            <div class="f_tbl_dash">~</div>
+            <div><div class="f_srch"><input type="text" placeholder="엑셀파일 다운로드"><a href="" class="btn_search"></a></div></div>
+        </div>
+        <div class="l_ib_t_">
+            <div><div class="ib_w"><span class="f_txt">라벨제목</span></div></div>
+            <div><select><option value="">엑셀파일 다운로드</option></select></div>
+            <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+            <div><div class="ib_w"><a href="" class="btn btn_sm btn_gray"><span>검색</span></a></div></div>
+        </div>
+        <div class="f_onoff"><input type="checkbox" id="c03"><label for="c03"></label></div>
+    </div>
+    
+    <div class="pd_tb80 form_xs">
+        <div class="f_check"><input type="checkbox" id="c14"><label for="c14" class="f_txt"><i></i>체크박스</label></div>
+        <div class="f_radio"><input type="radio" id="r14"><label for="r14" class="f_txt"><i></i>체크박스</label></div>
+        <input type="text" placeholder="엑셀파일 다운로드">
+        <input type="password" placeholder="엑셀파일 다운로드">
+        <input type="date" placeholder="엑셀파일 다운로드">
+        <input type="number" placeholder="엑셀파일 다운로드">
+        <select><option value="">엑셀파일 다운로드</option></select>
+        <textarea placeholder="엑셀파일 다운로드"></textarea>
+        <div class="f_srch"><input type="text" placeholder="엑셀파일 다운로드"><a href="" class="btn_search"></a></div>
+        <div class="f_unit"><input type="text" placeholder="456735683583457"><span class="f_txt">달러</span></div>
+        <div class="d_tbl">
+            <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+            <div><div class="ib_w"><a href="" class="btn btn_xs btn_gray"><span>엑셀파일 다운로드</span></a></div></div>
+        </div>
+        <div class="d_tbl">
+            <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+            <div><div class="ib_w"><span class="f_txt">원</span></div></div>
+        </div>
+        <div class="d_tbl">
+            <div><div class="d_tbl"><div><input type="text" placeholder="엑셀파일 다운로드"></div><div><div class="ib_w"><span class="f_txt">원</span></div></div></div></div>
+            <div class="f_tbl_dash">~</div>
+            <div><div class="d_tbl"><div><input type="text" placeholder="엑셀파일 다운로드"></div><div><div class="ib_w"><span class="f_txt">원</span></div></div></div></div>
+        </div>
+        <div class="d_tbl">
+            <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+            <div class="f_tbl_dash">~</div>
+            <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+        </div>
+        <div class="d_tbl">
+            <div><div class="f_srch"><input type="text" placeholder="엑셀파일 다운로드"><a href="" class="btn_search"></a></div></div>
+            <div class="f_tbl_dash">~</div>
+            <div><div class="f_srch"><input type="text" placeholder="엑셀파일 다운로드"><a href="" class="btn_search"></a></div></div>
+        </div>
+        <div class="l_ib_t_">
+            <div><div class="ib_w"><span class="f_txt">라벨제목</span></div></div>
+            <div><select><option value="">엑셀파일 다운로드</option></select></div>
+            <div><input type="text" placeholder="엑셀파일 다운로드"></div>
+            <div><div class="ib_w"><a href="" class="btn btn_xs btn_gray"><span>검색</span></a></div></div>
+        </div>
+        <div class="f_onoff"><input type="checkbox" id="c04"><label for="c04"></label></div>
+    </div>
+
+    <div class="bottom_fixed_area">
+        <div class="refund_check_total dlr_va_m">
+            <div class="fl_l"><span class="text_14 mg_t0">환급금 신청 : 총</span><strong id="applyCnt" class="text_14 tc_f0666d mg_t0 pd_l4">23123123</strong><span class="text_14 mg_t0 pd_l4">건</span></div>
+            <div class="fl_r"><strong id="applyAmt" class="text_18 fw_b tc_f0666d mg_t0">3123123</strong><span class="text_14 fw_b mg_t0 pd_l4">원</span></div>
+        </div>
+        <div class="d_tbl">
+            <div>
+                <div><a href="" class="btn btn_md btn_navy btn_square w_100p"><span>하단버튼</span></a></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
