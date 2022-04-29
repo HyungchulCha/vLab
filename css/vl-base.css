@@ -1167,7 +1167,7 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 }
 
 /* paging */
-/* .paging {font-size:0; line-height:0; text-align:center; margin-top:16px;}
+.paging {font-size:0; line-height:0; text-align:center; margin-top:16px;}
 .paging * {vertical-align:top;}
 .paging a, 
 .paging strong {display:inline-block; border:1px solid transparent; margin:0 2px;}
@@ -1189,10 +1189,10 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 .paging strong.p_next {background-position:-80px -80px;}
 .paging a.p_last {background-position:-120px 0;}
 .paging a.p_last:hover {background-position:-120px -40px;}
-.paging strong.p_last {background-position:-120px -80px;} */
+.paging strong.p_last {background-position:-120px -80px;}
 
 /* paging02 */
-.paging {font-size:0; line-height:0; text-align:center; margin-top:16px;}
+/* .paging {font-size:0; line-height:0; text-align:center; margin-top:16px;}
 .paging * {vertical-align:top;}
 .paging li {display:inline-block; border:1px solid transparent; margin:0 2px;}
 .paging li {width:36px; height:36px; font-family:'Century Gothic'; font-size:14px; line-height:34px; font-weight:bold; text-align:center; color:#333; border-radius:2px; background-repeat:no-repeat;}
@@ -1203,7 +1203,7 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 .paging li.prev {background-position:-40px -40px;}
 .paging li.prev.disabled {background-position:-40px -80px;}
 .paging li.next {background-position:-80px -40px;}
-.paging li.next.disabled {background-position:-80px -80px;}
+.paging li.next.disabled {background-position:-80px -80px;} */
 
 /* page skip */
 .page_skip {border-top:1px solid #aaa; border-bottom:1px solid #aaa; margin-top:32px;}
