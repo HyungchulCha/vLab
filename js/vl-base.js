@@ -515,7 +515,106 @@ function subTabScroll() {
 
 }
 
+/* header */
+function headerHandle() {
+
+    var tglSearch = $('.tgl_search'),
+        tglUser = $('.tgl_user'),
+        tglMenu = $('.tgl_menu'),
+        btnCloseSearch = $('.gs .btn_close'),
+        btnCloseMenu = $('.gn .btn_close'),
+        gs = $('.gs'),
+        mm = $('.mm'),
+        gn = $('.gn'),
+        hUser = $('.h_user'),
+        hMenu = $('.h_menu'),
+        gsListLast = $('.gs .gs_fv_list a:last-child'),
+        mmListLast = $('.mm .mm_list > ul > li:last-child > a'),
+        gnListLast = $('.gn .gn_list > ul > li:last-child > div > ul > li:last-child > a');
+
+    
+    hUser.on('mouseenter', function(){
+        $('.tgl_user').length > 0 && !(mm.hasClass('hover')) && mm.addClass('hover');
+    });
+    hUser.on('mouseleave', function(){
+        $('.tgl_user').length > 0 && mm.hasClass('hover') && mm.removeClass('hover');
+    });
+    hUser.on('focusin', function(){
+        $('.tgl_user').length > 0 && !(mm.hasClass('hover')) && mm.addClass('hover');
+    });
+    mmListLast.on('keydown', function(e){
+        var kc = e.keyCode || e.which;
+        if (kc === 9) {
+            mm.hasClass('hover') && mm.removeClass('hover');
+        }
+    });
+    tglUser.on('keydown', function(e){
+        var kc = e.keyCode || e.which;
+        if (kc === 9 && e.shiftKey) {
+            mm.hasClass('hover') && mm.removeClass('hover');
+        }
+    });
+
+    hMenu.on('mouseenter', function(){
+        sCheck() === 'p' && !(gn.hasClass('hover')) && gn.addClass('hover');
+    });
+    hMenu.on('mouseleave', function(){
+        sCheck() === 'p' && gn.hasClass('hover') && gn.removeClass('hover');
+    });
+    hMenu.on('focusin', function(){
+        sCheck() === 'p' && !(gn.hasClass('hover')) && gn.addClass('hover');
+    });
+    gnListLast.on('keydown', function(e){
+        var kc = e.keyCode || e.which;
+        if (kc === 9) {
+            sCheck() === 'p' && gn.hasClass('hover') && gn.removeClass('hover');
+        }
+    });
+    tglMenu.on('keydown', function(e){
+        var kc = e.keyCode || e.which;
+        if (kc === 9 && e.shiftKey) {
+            sCheck() === 'p' && gn.hasClass('hover') && gn.removeClass('hover');
+        }
+    });
+    tglMenu.on('click', function(){
+        (sCheck() === 't' || sCheck() === 'm') && !(gn.hasClass('hover')) && gn.addClass('hover');
+        return false;
+    });
+    btnCloseMenu.on('click', function(){
+        gn.hasClass('hover') && gn.removeClass('hover'), tglMenu.focus();
+        return false;
+    });
+
+    tglSearch.on('click', function(){
+        !(gs.hasClass('hover')) && (gs.addClass('hover'), btnCloseSearch.focus());
+        return false;
+    });
+    btnCloseSearch.on('click', function(){
+        gs.hasClass('hover') && (gs.removeClass('hover'), tglSearch.focus());
+        return false;
+    });
+    gsListLast.on('keydown', function(e){
+        var kc = e.keyCode || e.which;
+        if (kc === 9) {
+            gs.hasClass('hover') && (gs.removeClass('hover'), tglSearch.focus());
+        }
+    });
+    btnCloseSearch.on('keydown', function(e){
+        var kc = e.keyCode || e.which;
+        if (kc === 9 && e.shiftKey) {
+            gs.hasClass('hover') && (gs.removeClass('hover'));
+        }
+    });
+}
+
+function mVisual() {
+    $(this).css('height', $(window).outerHeight());
+}
+
 $(document).ready(function(){
+
+    headerHandle();
+
     afterHasCheck('a', newWindow);
     afterHasCheck('.lt_l', listToggle);
     afterHasCheck('.dt_l', targetToggle);
@@ -524,4 +623,7 @@ $(document).ready(function(){
     afterHasCheck('.f_unit', fUnitTextWidth);
     afterHasCheck('.form_area', formAreaTitleWidth);
     afterHasCheck('.s_tab', subTabScroll);
+
+    afterHasCheck('.m_visual', mVisual, true);
+
 });
