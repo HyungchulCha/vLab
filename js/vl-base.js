@@ -535,8 +535,14 @@ function headerHandle() {
         gsListLast = $('.global_search .gs_fv_list a:last-child'),
         mmListLast = $('.mm .mm_list > ul > li:last-child > a'),
         gnListLast = $('.gn .gn_list > ul > li:last-child > div > ul > li:last-child > a');
-
     
+    /*
+        - 유저 영역 마우스 오버 시
+        - 유저 영역 마우스 아웃 시
+        - 유저 영역 포커스 진입 시
+        - 유저 마지막 리스트에서 벗어날 때
+        - 유저 버튼에서 역방향으로 벗어날 때
+    */
     hUser.on('mouseenter', function(){
         $('.tgl_user').length > 0 && !(mm.hasClass('hover')) && mm.addClass('hover');
     });
@@ -559,6 +565,21 @@ function headerHandle() {
         }
     });
 
+    /*
+        pc
+        - 전체메뉴 영역 마우스 오버 시
+        - 전체메뉴 영역 마우스 아웃 시 
+        - 전체메뉴 영역 포커스 진입 시
+        - 전체메뉴 첫 리스트에서 역방향 포커스 누를 때
+        - 전체메뉴 마지막 리스트에서 벗어날 때
+
+        tablet, mobile
+        - 전체메뉴 버튼 클릭 시
+        - 전체메뉴 닫기 버튼 클릭 시
+        
+        window resize
+        - tablet, mobile -> pc 넘어갈 때
+    */
     hMenu.on('mouseenter', function(){
         sCheck() === 'p' && !(gn.hasClass('hover')) && gn.addClass('hover');
     });
@@ -590,8 +611,13 @@ function headerHandle() {
     });
     $(window).resize(function(){
         sCheck() === 'p' && bd.hasClass('of_h') && bdbg.hasClass('on') && gm.hasClass('hover') && (bd.removeClass('of_h'), bdbg.removeClass('on'), gm.removeClass('hover'));
-    })
+    });
 
+    /*
+        - 검색 버튼 클릭 시
+        - 닫기 버튼 클릭 시
+        - 자주 찾는 검색어 마지막 리스트 포커스 벗어날 때
+    */
     tglSearch.on('click', function(){
         !(gs.hasClass('hover')) && (bd.addClass('of_h'), bdbg.addClass('on'), gs.addClass('hover'), btnCloseGlobalSearch.focus());
         return false;
@@ -620,9 +646,5 @@ $(document).ready(function(){
     afterHasCheck('.f_unit', fUnitTextWidth);
     afterHasCheck('.form_area', formAreaTitleWidth);
     afterHasCheck('.s_tab', subTabScroll);
-
-    afterHasCheck('.main', mWinHeight, true);
-    mScroll();
-    afterHasCheck('.m_visual', mVisual, true);
 
 });

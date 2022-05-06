@@ -1,5 +1,5 @@
 /* header */
-.main .header {background:none; border-bottom:1px solid #c7cacd;}
-.main .header.hd_w {background:#fff; border-bottom:0;}
-.main .h_logo > a {background-color:blue;}
-.main .hd_w .h_logo > a {background-color:red;}
+.main .header {background:none;}/* border-bottom:1px solid #c7cacd; */
+.main .header.hd_w {background:#fff;}/*  border-bottom:0; */
+.main .header .h_logo > a {background-image:url(../image/header/logo_w.png);}
+.main .header.hd_w .h_logo > a {background-image:url(../image/header/logo.png);}
