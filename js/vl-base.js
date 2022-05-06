@@ -518,7 +518,10 @@ function subTabScroll() {
 /* header */
 function headerHandle() {
 
-    var tglSearch = $('.tgl_search'),
+    var 
+        wrapper = $('.wrap'),
+        bd = $('body'),
+        tglSearch = $('.tgl_search'),
         tglUser = $('.tgl_user'),
         tglMenu = $('.tgl_menu'),
         btnCloseSearch = $('.gs .btn_close'),
@@ -586,23 +589,23 @@ function headerHandle() {
     });
 
     tglSearch.on('click', function(){
-        !(gs.hasClass('hover')) && (gs.addClass('hover'), btnCloseSearch.focus());
+        !(gs.hasClass('hover')) && (wrapper.addClass('gs_open'), gs.addClass('hover'), btnCloseSearch.focus());
         return false;
     });
     btnCloseSearch.on('click', function(){
-        gs.hasClass('hover') && (gs.removeClass('hover'), tglSearch.focus());
+        gs.hasClass('hover') && (wrapper.removeClass('gs_open'), gs.removeClass('hover'), tglSearch.focus());
         return false;
     });
     gsListLast.on('keydown', function(e){
         var kc = e.keyCode || e.which;
         if (kc === 9) {
-            gs.hasClass('hover') && (gs.removeClass('hover'), tglSearch.focus());
+            gs.hasClass('hover') && (wrapper.removeClass('gs_open'), gs.removeClass('hover'), tglSearch.focus());
         }
     });
     btnCloseSearch.on('keydown', function(e){
         var kc = e.keyCode || e.which;
         if (kc === 9 && e.shiftKey) {
-            gs.hasClass('hover') && (gs.removeClass('hover'));
+            gs.hasClass('hover') && (wrapper.removeClass('gs_open'), gs.removeClass('hover'));
         }
     });
 }
