@@ -794,12 +794,23 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 .snb a:focus, .snb a:hover, .snb a:active {position:absolute; left:0px; top:1000px; padding: 8px 0; display:block; box-sizing:border-box;height:36px; background:#20262c; font-size:12px; font-weight:bold; line-height:18px; color:#fff}
 
 /* wrap */
+.wrap {width:100%; overflow-x:hidden;}
+
+@media (min-width:1180px) {
+	.container {padding-top:96px;}
+}
+@media (min-width:768px) and (max-width:1179px) {
+	.container {padding-top:80px;}
+}
+@media (max-width:767px) {
+	.container {padding-top:64px;}
+}
 
 /* header */
 .header {position:fixed; width:100%; left:0; top:0; background:#fff; border-bottom:1px solid rgba(0,0,0,0.048); z-index:800; font-size:0; line-height:0;}
 .header .fl_r > div {float:left;}
 
-.header .h_logo > a {display:block; background:url(../image/header/logo.png) no-repeat center center / 100% 100%; position:relative;}
+.header .h_logo > a {display:block; background:url(../image/header/logo.png) no-repeat left center / auto 100%; position:relative;}
 
 .header .tgl_search,
 .header .btn_login,
@@ -807,6 +818,7 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 .header .tgl_menu {display:block; border-radius:50%; box-shadow:4px 0 16px rgba(11,47,106, 0.15); overflow:hidden; position:relative; z-index:810;}
 
 .header .tgl_search {background:url(../image/common/ico_search_64_w.png) no-repeat #333 center center / 50%;}
+.header .btn_login {background:url(../image/common/ico_power_64_w.png) no-repeat #2564e7 center center / 50%;}
 .header .tgl_user {background:url(../image/common/ico_user_64_w.png) no-repeat #2564e7 center center / 50%;}
 .header .tgl_menu {background:url(../image/common/ico_menu_64_v1.png) no-repeat #fff center center / 50%;}
 
@@ -848,7 +860,7 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 @media (min-width:768px) and (max-width:1179px) {
 	.header {height:80px; padding:0 24px;}
 
-	.header .h_logo > a {width:108px; height:34px; margin-top:23px; z-index:810;}
+	.header .h_logo > a {width:102px; height:32px; margin-top:24px; z-index:810;}
 	.header .h_search,
 	.header .h_menu {padding:16px 0; margin-left:7px;}
 	.header .tgl_search,
@@ -857,7 +869,7 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 @media (max-width:767px) {
 	.header {height:64px; padding:0 16px;}
 
-	.header .h_logo > a {width:94px; height:30px; margin-top:17px; z-index:810;}
+	.header .h_logo > a {width:84px; height:26px; margin-top:19px; z-index:810;}
 	.header .h_search,
 	.header .h_menu {padding:12px 0; margin-left:6px;}
 	.header .tgl_search,
@@ -869,10 +881,10 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 .global_search.hover {display:block; position:fixed; left:0; top:0; width:100%; background:#fff; z-index:910;}
 .global_search > div {position:relative;}
 .global_search .gs_logo {position:absolute; left:0; top:0; margin-top:29px;}
-.global_search .gs_logo > a {display:block; width:120px; height:38px; background:url(../image/header/logo.png) no-repeat center center / 100% 100%; position:relative;}
+.global_search .gs_logo > a {display:block; width:120px; height:38px; background:url(../image/header/logo.png) no-repeat left center / auto 100%; position:relative;}
 .global_search .gs_t {position:relative;}
 .global_search .gs_title {font-weight:700; color:#333;}
-.global_search .btn_close {position:absolute; display:block; border-radius:50%; background:url(../image/common/ico_close_64_w.png) no-repeat #0b2f6b center center / 32%; }
+.global_search .btn_close {position:absolute; display:block; border-radius:50%; background:url(../image/common/ico_close_64_b.png) no-repeat #ddd center center / 32%;}
 .global_search .gs_form {position:relative;}
 .global_search .gs_form input[type="text"] {border:2px solid #333; font-weight:700;}
 .global_search .gs_form .btn_search {display:block; border-radius:50%; background:url(../image/common/ico_search_64_w.png) no-repeat #333 center center / 50%; position:absolute; right:0; top:50%; transform:translateY(-50%);}
@@ -925,18 +937,18 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 /* global_menu */
 .global_menu {display:none; font-size:0; line-height:0;}
 .global_menu.hover {display:block; position:fixed; right:0; top:0; height:100%; background:#fff; z-index:910; overflow:hidden; overflow-y:auto;}
-.global_menu .btn_close {position:absolute; display:block; background:url(../image/common/ico_close_64_w.png) no-repeat #0b2f6b center center / 32%; border-radius:50%;}
-.global_menu .gm_user > div::before {display:inline-block; content:''; vertical-align:middle;}
-.global_menu .gm_user > div > *,
+.global_menu .btn_close {position:absolute; display:block; background:url(../image/common/ico_close_64_b.png) no-repeat #ddd center center / 32%; border-radius:50%;}
+.global_menu .gm_user .gmu_t::before {display:inline-block; content:''; vertical-align:middle;}
+.global_menu .gm_user .gmu_t > *,
 .global_menu .gm_user p * {display:inline-block; vertical-align:middle;}
-.global_menu .gm_user .btn_login,
-.global_menu .gm_user .btn_my,
-.global_menu .gm_user .btn_logout {position:relative; color:#2564e7; font-weight:800;}/* background:#fff; border:1px solid #2564e7; */
-.global_menu .gm_user [class^="btn_"] ~ [class^="btn_"] {margin-left:8px; padding-left:10px;}
-.global_menu .gm_user [class^="btn_"] ~ [class^="btn_"]::before {display:block; content:''; width:2px; height:2px; border-radius:50%; background:#ddd; position:absolute; left:0; top:50%; margin-top:-1px;}
 .global_menu .gm_user p i {border-radius:50%; overflow:hidden; background:url() no-repeat #ddd center center / 100% 100%;}
-.global_menu .gm_user p span {text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+.global_menu .gm_user p span {text-overflow:ellipsis; overflow:hidden; white-space:nowrap; font-weight:700;}
+.global_menu .gm_user .btn_login {color:#333; font-weight:700; background:url(../image/common/ico_arrow_next_64_b.png) no-repeat right center / auto 56%;}
+.global_menu .gm_user .gmu_b {text-align:center; background:#eee;}
+.global_menu .gm_user .gmu_b a {position:relative; display:inline-block; color:#333; font-weight:700;}
+.global_menu .gm_user .gmu_b a ~ a::before {display:block; content:''; width:2px; height:2px; border-radius:50%; background:rgba(0,0,0,0.2); position:absolute; left:0; top:50%; transform:translate3d(-50%, -50%, 0);}
 .global_menu .gm_list a {display:block;}
+.global_menu .gm_list > ul > li > a {font-weight:700;}
 .global_menu .gm_list > ul > li > div > ul > li::before {display:block; content:'';}
 
 @media (min-width:1180px) {
@@ -944,18 +956,18 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 @media (min-width:768px) and (max-width:1179px) {
 	.global_menu.hover {width:400px; padding:0 24px;}
 	.global_menu .btn_close {width:48px; height:48px; right:24px; top:16px;}
-	.global_menu .gm_user {padding:16px 0; padding-right:72px;}
-	.global_menu .gm_user > div::before {height:48px;}
-	.global_menu .gm_user .fl_l > * {margin-right:7px;}
-	.global_menu .gm_user .fl_r > * {margin-left:7px;}
-	.global_menu .gm_user .btn_login,
-	.global_menu .gm_user .btn_my,
-	.global_menu .gm_user .btn_logout {font-size:16px; line-height:24px;}/* padding:11px 24px; border-radius:24px; */
-	.global_menu .gm_user p i {width:48px; height:48px; margin-right:7px;}
-	.global_menu .gm_user p span {font-size:18px; line-height:26px; font-weight:700; max-width:110px;}
+	.global_menu .gm_user .gmu_t {padding:16px 0;}
+	.global_menu .gm_user .gmu_t::before {height:48px;}
+	.global_menu .gm_user .btn_login {font-size:18px; line-height:26px; padding-right:20px;}
+	.global_menu .gm_user p i {width:48px; height:48px; margin-right:12px;}
+	.global_menu .gm_user p span {font-size:18px; line-height:26px; max-width:240px;}
+
+	.global_menu .gm_user .gmu_b {margin:0 -24px; margin-bottom:24px; padding:10px 0;}
+	.global_menu .gm_user .gmu_b a {font-size:14px; line-height:22px; padding:0 10px;}
+
 	.global_menu .gm_list {padding-bottom:24px;}
 	.global_menu .gm_list > ul > li {margin-top:8px;}
-	.global_menu .gm_list > ul > li > a {font-size:18px; line-height:26px; font-weight:700; color:#333; padding:8px 0;}
+	.global_menu .gm_list > ul > li > a {font-size:18px; line-height:26px; color:#333; padding:8px 0;}
 	.global_menu .gm_list > ul > li > div {border-top:1px solid #eee; padding:8px 0;}
 	.global_menu .gm_list > ul > li > div > ul > li {position:relative; padding-left:12px;}
 	.global_menu .gm_list > ul > li > div > ul > li::before {width:4px; height:4px; border-radius:50%; background:#ddd; position:absolute; left:0; top:14px;}
@@ -964,18 +976,18 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 @media (max-width:767px) {
 	.global_menu.hover {width:320px; padding:0 16px;}
 	.global_menu .btn_close {width:40px; height:40px; right:16px; top:12px;}
-	.global_menu .gm_user {padding:12px 0; padding-right:56px;}
-	.global_menu .gm_user > div::before {height:40px;}
-	.global_menu .gm_user .fl_l > * {margin-right:6px;}
-	.global_menu .gm_user .fl_r > * {margin-left:6px;}
-	.global_menu .gm_user .btn_login,
-	.global_menu .gm_user .btn_my,
-	.global_menu .gm_user .btn_logout {font-size:14px; line-height:22px;} /* padding:8px 20px; border-radius:20px; */
-	.global_menu .gm_user p i {width:40px; height:40px; margin-right:6px;}
-	.global_menu .gm_user p span {font-size:16px; line-height:24px; font-weight:700; max-width:84px;}
+	.global_menu .gm_user .gmu_t {padding:12px 0;}
+	.global_menu .gm_user .gmu_t::before {height:40px;}
+	.global_menu .gm_user .btn_login {font-size:16px; line-height:24px; padding-right:18px;}
+	.global_menu .gm_user p i {width:40px; height:40px; margin-right:8px;}
+	.global_menu .gm_user p span {font-size:16px; line-height:24px; max-width:200px;}
+
+	.global_menu .gm_user .gmu_b {margin:0 -16px; margin-bottom:16px; padding:8px 0;}
+	.global_menu .gm_user .gmu_b a {font-size:12px; line-height:20px; padding:0 8px;}
+
 	.global_menu .gm_list {padding-bottom:20px;}
 	.global_menu .gm_list > ul > li {margin-top:8px;}
-	.global_menu .gm_list > ul > li > a {font-size:16px; line-height:24px; font-weight:700; color:#333; padding:8px 0;}
+	.global_menu .gm_list > ul > li > a {font-size:16px; line-height:24px; color:#333; padding:8px 0;}
 	.global_menu .gm_list > ul > li > div {border-top:1px solid #eee; padding:8px 0;}
 	.global_menu .gm_list > ul > li > div > ul > li {position:relative; padding-left:12px;}
 	.global_menu .gm_list > ul > li > div > ul > li::before {width:4px; height:4px; border-radius:50%; background:#ddd; position:absolute; left:0; top:13px;}
@@ -989,7 +1001,7 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 .footer .fnb > div > ul > li ~ li::before {display:block; content:''; width:4px; height:4px; background:#ddd; border-radius:50%; position:absolute; left:0; top:50%; transform:translateY(-50%);}
 .footer .fnb > div > ul > li > a {display:block; color:#333;}
 .footer .f_b {background:#2d2d2d;}
-.footer .f_b .f_logo {display:inline-block; background:url(../image/header/logo_w.png) no-repeat center center / 100%; opacity:0.48;}
+.footer .f_b .f_logo {display:inline-block; background:url(../image/header/logo_w.png) no-repeat left center / auto 100%; opacity:0.48;}
 .footer .f_b .f_address,
 .footer .f_b .f_copyright {display:block; color:#5f5f5f;}
 .footer .f_b .f_copyright {margin-top:8px;}
@@ -1009,8 +1021,8 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 	.footer .fnb > div {padding:16px 24px;}
 	.footer .fnb > div > ul > li ~ li {padding:0 0 0 18px; margin-left:14px;}
 	.footer .fnb > div > ul > li > a {font-size:15px; line-height:23px;}
-	.footer .f_b > div {padding:48px 24px 72px 24px;}
-	.footer .f_logo {width:108px; height:34px;}
+	.footer .f_b > div {padding:48px 24px 56px 24px;}
+	.footer .f_logo {width:102px; height:32px;}
 	.footer .f_b .f_address,
 	.footer .f_b .f_copyright {font-size:13px; line-height:21px;}
 	.footer .f_b .f_address {margin-top:24px;}
@@ -1020,8 +1032,8 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 	.footer .fnb > div {padding:12px 16px;}
 	.footer .fnb > div > ul > li ~ li {padding:0 0 0 16px; margin-left:12px;}
 	.footer .fnb > div > ul > li > a {font-size:14px; line-height:22px;}
-	.footer .f_b > div {padding:40px 16px 60px 16px;}
-	.footer .f_logo {width:94px; height:30px;}
+	.footer .f_b > div {padding:40px 16px 48px 16px;}
+	.footer .f_logo {width:84px; height:26px;}
 	.footer .f_b .f_address,
 	.footer .f_b .f_copyright {font-size:12px; line-height:20px;}
 	.footer .f_b .f_address {margin-top:16px;}
