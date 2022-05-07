@@ -1,4 +1,5 @@
-/* main - scroll + header */
+/* scroll + header */
+
 var mWinH = 0;
 
 function mWinHeight() {
@@ -7,31 +8,32 @@ function mWinHeight() {
 
 function mScroll() {
 
-    var isMain = $('.main').length,
-        hd = $('.header'),
-        win = $(window);
+    var win = $(window),
+        hd = $('.header');
 
-    if (isMain > 0) {
-        win.scroll(function(){
-            if (win.scrollTop() > mWinH) {
-                hd.addClass('hd_w');
-            } else {
-                hd.removeClass('hd_w');
-            }
-        });
-    }
+    win.scroll(function () {
+        if (win.scrollTop() > mWinH) {
+            hd.addClass('hd_w');
+        } else {
+            hd.removeClass('hd_w');
+        }
+    });
 
 }
 
 /* main - visual height check */
+
 function mVisual() {
     $(this).css('height', $(window).outerHeight());
 }
 
-$(document).ready(function(){
-    
+$(document).ready(function () {
+
     afterHasCheck('.main', mWinHeight, true);
     mScroll();
     afterHasCheck('.m_visual', mVisual, true);
-
+    fnSlide({ dom: '.m_pick > div', loop: true, auto: false, center: false});
+    fnSlide({ dom: '.m_news > div', loop: true, auto: false, center: true, breakPoint: ['p', 't']});
+    
 });
+
