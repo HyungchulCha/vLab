@@ -943,9 +943,9 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 .global_menu .gm_user p * {display:inline-block; vertical-align:middle;}
 .global_menu .gm_user p i {border-radius:50%; overflow:hidden; background:url() no-repeat #ddd center center / 100% 100%;}
 .global_menu .gm_user p span {text-overflow:ellipsis; overflow:hidden; white-space:nowrap; font-weight:700;}
-.global_menu .gm_user .btn_login {color:#333; font-weight:700; background:url(../image/common/ico_arrow_next_64_b.png) no-repeat right center / auto 56%;}
-.global_menu .gm_user .gmu_b {text-align:center; background:#eee;}
-.global_menu .gm_user .gmu_b a {position:relative; display:inline-block; color:#333; font-weight:700;}
+.global_menu .gm_user .btn_login {color:#2564e7; font-weight:700; background:url(../image/common/ico_arrow_next_64_v1.png) no-repeat right center / auto 55%;}
+.global_menu .gm_user .gmu_b {text-align:center; background:#e9effd;} /* border:1px solid #2564e7; */
+.global_menu .gm_user .gmu_b a {position:relative; display:inline-block; color:#2564e7;}
 .global_menu .gm_user .gmu_b a ~ a::before {display:block; content:''; width:2px; height:2px; border-radius:50%; background:rgba(0,0,0,0.2); position:absolute; left:0; top:50%; transform:translate3d(-50%, -50%, 0);}
 .global_menu .gm_list a {display:block;}
 .global_menu .gm_list > ul > li > a {font-weight:700;}
@@ -958,12 +958,12 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 	.global_menu .btn_close {width:48px; height:48px; right:24px; top:16px;}
 	.global_menu .gm_user .gmu_t {padding:16px 0;}
 	.global_menu .gm_user .gmu_t::before {height:48px;}
-	.global_menu .gm_user .btn_login {font-size:18px; line-height:26px; padding-right:20px;}
+	.global_menu .gm_user .btn_login {font-size:22px; line-height:30px; padding-right:22px;}
 	.global_menu .gm_user p i {width:48px; height:48px; margin-right:12px;}
 	.global_menu .gm_user p span {font-size:18px; line-height:26px; max-width:240px;}
 
-	.global_menu .gm_user .gmu_b {margin:0 -24px; margin-bottom:24px; padding:10px 0;}
-	.global_menu .gm_user .gmu_b a {font-size:14px; line-height:22px; padding:0 10px;}
+	.global_menu .gm_user .gmu_b {margin-bottom:32px; padding:12px 0; border-radius:24px;}/* margin:0 -24px; */
+	.global_menu .gm_user .gmu_b a {font-size:14px; line-height:22px; padding:0 12px;}
 
 	.global_menu .gm_list {padding-bottom:24px;}
 	.global_menu .gm_list > ul > li {margin-top:8px;}
@@ -978,12 +978,12 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 	.global_menu .btn_close {width:40px; height:40px; right:16px; top:12px;}
 	.global_menu .gm_user .gmu_t {padding:12px 0;}
 	.global_menu .gm_user .gmu_t::before {height:40px;}
-	.global_menu .gm_user .btn_login {font-size:16px; line-height:24px; padding-right:18px;}
+	.global_menu .gm_user .btn_login {font-size:18px; line-height:26px; padding-right:18px;}
 	.global_menu .gm_user p i {width:40px; height:40px; margin-right:8px;}
 	.global_menu .gm_user p span {font-size:16px; line-height:24px; max-width:200px;}
 
-	.global_menu .gm_user .gmu_b {margin:0 -16px; margin-bottom:16px; padding:8px 0;}
-	.global_menu .gm_user .gmu_b a {font-size:12px; line-height:20px; padding:0 8px;}
+	.global_menu .gm_user .gmu_b {margin-bottom:24px; padding:10px 0; border-radius:21px;} /* margin:0 -16px; */
+	.global_menu .gm_user .gmu_b a {font-size:12px; line-height:20px; padding:0 10px;}
 
 	.global_menu .gm_list {padding-bottom:20px;}
 	.global_menu .gm_list > ul > li {margin-top:8px;}
