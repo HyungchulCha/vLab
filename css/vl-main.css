@@ -51,7 +51,7 @@
 
 /* m_visual */
 .m_visual {position:relative;}
-.m_visual .mv_scroll {border-radius:50%; background:url(../image/common/ico_arrow_down_64_w.png) no-repeat #2564e7 center center / 32%; transform-origin:center center; transform:translateX(-50%); position:absolute; left:50%; box-shadow:6px 6px 20px rgba(0,0,0,0.1);
+.m_visual .mv_scroll {border-radius:50%; background:url(../image/common/ico_arrow_down_64_w.png) no-repeat #2564e7 center center / 40%; transform-origin:center center; transform:translateX(-50%); position:absolute; left:50%; box-shadow:6px 6px 20px rgba(0,0,0,0.1);
     animation: bounce_frames 0.5s;
     animation-direction: alternate;
     animation-timing-function: cubic-bezier(.5, 1, 0.05, .5);
