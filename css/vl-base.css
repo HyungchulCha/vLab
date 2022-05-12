@@ -815,7 +815,12 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 .header .tgl_search,
 .header .btn_login,
 .header .tgl_user,
-.header .tgl_menu {display:block; border-radius:50%; box-shadow:4px 0 16px rgba(11,47,106, 0.15); overflow:hidden; position:relative; z-index:810;}
+.header .tgl_menu {display:block; border-radius:50%; box-shadow:4px 0 16px rgba(11,47,106, 0.15); overflow:hidden; position:relative; z-index:810; opacity:0.72; transition:opacity 0.25s ease-out;}
+
+.header .tgl_search:hover,
+.header .btn_login:hover,
+.header .tgl_user:hover,
+.header .tgl_menu:hover {opacity:1;}
 
 .header .tgl_search {background:url(../image/common/ico_search_64_w.png) no-repeat #333 center center / 50%;}
 .header .btn_login {background:url(../image/common/ico_power_64_w.png) no-repeat #2564e7 center center / 50%;}
@@ -840,7 +845,7 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 	.header .tgl_menu {width:56px; height:56px;}
 
 	.mm {text-align:center;}
-	.mm.hover {display:block; position:absolute; left:50%; top:100%; width:184px; margin-left:-92px; margin-top:-8px; border-radius:8px; padding:20px 24px; background:#fff; box-shadow:6px 6px 20px rgba(0,0,0,0.1);}
+	.mm.hover {display:block; position:absolute; left:50%; top:100%; width:184px; margin-left:-92px; margin-top:-8px; border-radius:8px; padding:24px 28px; background:#fff; box-shadow:6px 6px 20px rgba(0,0,0,0.1);}
 	.mm .mm_user i {display:inline-block; width:72px; height:72px; border-radius:50%; overflow:hidden; background:url() no-repeat #ddd center center / 100% 100%;}
 	.mm .mm_user p {display:block; margin-top:12px;}
 	.mm .mm_user p * {display:inline-block; vertical-align:bottom;}
@@ -850,6 +855,7 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 	.mm .mm_list ul li a {display:block; font-size:16px; line-height:24px; padding:4px 0; color:#333;}
 
 	.gn.hover {display:block; position:absolute; right:0; top:100%; width:240px; margin-top:-8px; border-radius:8px; padding:20px 24px; background:#fff; box-shadow:6px 6px 20px rgba(0,0,0,0.1);}
+	.gn .btn_close {width:32px; height:32px; background:url(../image/common/ico_close_64_b.png) no-repeat center center / 44%; position:absolute; right:6px; top:6px; opacity:0.72;}
 	.gn .gn_list > ul > li ~ li {margin-top:8px;}
 	.gn .gn_list > ul > li > a {display:block; font-size:18px; line-height:26px; font-weight:700; color:#333; padding:8px 0;}
 	.gn .gn_list > ul > li > div {border-top:1px solid #eee; padding:8px 0;}
@@ -894,7 +900,8 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 
 @media (min-width:1180px) {
 	.global_search > div {max-width:1180px; margin:0 auto;}
-	.global_search > div > div {width:calc(100% - 384px); margin:0 auto;}
+	.global_search > div > .gs_t,
+	.global_search > div > .gs_b {margin-left:192px; width:860px;}
 	.global_search .btn_close {width:56px; height:56px; left:100%; margin-left:8px; top:50%; transform:translateY(-50%);}
 	.global_search .gs_form {padding:20px 0;}
 	.global_search .gs_form input[type="text"] {font-size:20px; line-height:28px; padding:12px 28px; height:56px; border-radius:28px;}
@@ -942,7 +949,7 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 .global_menu .gm_user .gmu_t > *,
 .global_menu .gm_user p * {display:inline-block; vertical-align:middle;}
 .global_menu .gm_user p i {border-radius:50%; overflow:hidden; background:url() no-repeat #ddd center center / 100% 100%;}
-.global_menu .gm_user p span {text-overflow:ellipsis; overflow:hidden; white-space:nowrap; font-weight:700;}
+.global_menu .gm_user p span {text-overflow:ellipsis; overflow:hidden; white-space:nowrap; font-weight:700; color:#2564e7; border-bottom:1px dotted #2564e7;}
 .global_menu .gm_user .btn_login {color:#2564e7; font-weight:700; background:url(../image/common/ico_arrow_next_64_v1.png) no-repeat right center / auto 55%;}
 .global_menu .gm_user .gmu_b {text-align:center; background:#e9effd;} /* border:1px solid #2564e7; */
 .global_menu .gm_user .gmu_b a {position:relative; display:inline-block; color:#2564e7;}

@@ -524,6 +524,7 @@ function headerHandle() {
         tglSearch = $('.tgl_search'),
         tglUser = $('.tgl_user'),
         tglMenu = $('.tgl_menu'),
+        btnCloseGN = $('.gn .btn_close'),
         btnCloseGlobalSearch = $('.global_search .btn_close'),
         btnCloseGlobalMenu = $('.global_menu .btn_close'),
         mm = $('.mm'),
@@ -580,6 +581,7 @@ function headerHandle() {
         window resize
         - tablet, mobile -> pc 넘어갈 때
     */
+   /*
     hMenu.on('mouseenter', function(){
         sCheck() === 'p' && !(gn.hasClass('hover')) && gn.addClass('hover');
     });
@@ -601,15 +603,27 @@ function headerHandle() {
             sCheck() === 'p' && gn.hasClass('hover') && gn.removeClass('hover');
         }
     });
+    */
     tglMenu.on('click', function(){
+        sCheck() === 'p' && !(gn.hasClass('hover')) && gn.addClass('hover');
         (sCheck() === 't' || sCheck() === 'm') && (bd.addClass('of_h'), bdbg.addClass('on'), gm.addClass('hover'));
         return false;
+    });
+    btnCloseGN.on('click', function(){
+        gn.hasClass('hover') && gn.removeClass('hover');
+    });
+    gnListLast.on('keydown', function(e){
+        var kc = e.keyCode || e.which;
+        if (kc === 9) {
+            sCheck() === 'p' && gn.hasClass('hover') && gn.removeClass('hover');
+        }
     });
     btnCloseGlobalMenu.on('click', function(){
         (bd.removeClass('of_h'), bdbg.removeClass('on'), gm.removeClass('hover'));
         return false;
     });
     $(window).resize(function(){
+        (sCheck() === 't' || sCheck() === 'm') && gn.removeClass('hover');
         sCheck() === 'p' && bd.hasClass('of_h') && bdbg.hasClass('on') && gm.hasClass('hover') && (bd.removeClass('of_h'), bdbg.removeClass('on'), gm.removeClass('hover'));
     });
 
