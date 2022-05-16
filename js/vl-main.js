@@ -46,7 +46,7 @@ $(document).ready(function () {
     mVisualScroll();
     mVisualDown();
     fnSlide({ dom: '.m_pick .mp_slide', loop: false, auto: false, center: false });
-    afterHasCheck('.m_pick .mp_img', domRatio, true, (3 / 4))
+    afterHasCheck('.m_pick .mp_img', domRatio, true, (3 / 4));
     fnSlide({ dom: '.m_news .mn_slide', loop: true, auto: false, center: true, breakPoint: ['p', 't'] });
 
 });

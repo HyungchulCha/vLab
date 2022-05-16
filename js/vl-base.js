@@ -658,7 +658,7 @@ $(document).ready(function(){
     afterHasCheck('[class^="tab_"] .on a', tabSelected);
     afterHasCheck('.ib_w', inlineBlockWidth);
     afterHasCheck('.f_unit', fUnitTextWidth);
-    afterHasCheck('.form_area', formAreaTitleWidth);
+    //afterHasCheck('.form_area', formAreaTitleWidth);
     afterHasCheck('.s_tab', subTabScroll);
 
 });
