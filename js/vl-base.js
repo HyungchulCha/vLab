@@ -656,6 +656,7 @@ function modalTgl() {
         var target = $(this).attr('data-modal-target');
         $('#' + target).addClass('open');
         $('#' + target).find('.btn_close').first().focus();
+        $('body').addClass('of_h');
         afterHasCheck('.ib_w', inlineBlockWidth);
         return false;
     });
@@ -665,6 +666,7 @@ function modalTgl() {
             thP = $(this).parents('.modal'),
             target = thP.attr('id');
         thP.removeClass('open');
+        $('body').removeClass('of_h');
         $("[data-modal-target='" + target + "']").focus();
         return false;
     });

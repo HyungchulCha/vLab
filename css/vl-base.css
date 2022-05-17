@@ -494,7 +494,7 @@ a, a:focus, a:hover {text-decoration:none;}
 
 .btn_lg			{padding:13px 18px; border-radius:8px;}
 .btn_lg > span	{font-size:18px; line-height:26px; padding:0 8px;}
-.btn_md			{padding:11px 20px; border-radius:24px;}
+.btn_md			{padding:11px 20px; border-radius:24px; min-width:112px;}
 .btn_md > span	{font-size:16px; line-height:24px; padding:0 6px;}
 .btn_sm			{padding:8px 14px; border-radius:4px;}
 .btn_sm > span	{font-size:14px; line-height:22px; padding:0 4px;}
@@ -551,12 +551,14 @@ a, a:focus, a:hover {text-decoration:none;}
 .btn_md.btn_blue .ico_play {background:url(../image/common/ico_play_64_w.png) no-repeat center center / 100%;}
 .btn_md.btn_line_gray .ico_heart {background:url(../image/common/ico_heart_64_b.png) no-repeat center center / 100%; opacity:0.32;}
 .btn_md.btn_line_gray.on .ico_heart {background-image:url(../image/common/ico_heart_64_p.png); opacity:1;}
+.btn_xs.btn_line_gray .ico_delete {background:url(../image/common/ico_close_64_b.png) no-repeat center center / 64%;}
 
 /* form */
 input[type="text"], input[type="password"], input[type="date"], input[type="email"], input[type="number"], input[type="search"], input[type="checkbox"], input[type="radio"], textarea, select, label, button {display:inline-block; margin:0; padding:0; font-family:'NanumSquare', 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; font-weight:400; letter-spacing:-0.024em; vertical-align:middle;}
 input[type="text"], input[type="password"], input[type="date"], input[type="email"], input[type="number"], input[type="search"], textarea, select {-webkit-appearance:none; width:100%; background:transparent; background:#fff; color:#222; border:1px solid #ddd;}
 select {background-image:url(../image/common/ico_select_64_b.png); background-repeat:no-repeat;}
 input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, textarea:focus, select:focus {outline:none; border-color:#2564e7;}
+input[type="text"]:read-only, input[type="password"]:read-only, input[type="date"]:read-only, input[type="email"]:read-only, input[type="number"]:read-only, input[type="search"]:read-only, textarea:read-only {background:#f8f8f8; color:#777 !important;}
 textarea {max-width:100%; min-width:100%;}
 ::placeholder {color:#aaa;}
 a, button, input[type="button"], input[type="image"], input[type="submit"] {cursor:pointer;}
@@ -1089,7 +1091,7 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 
 /* sub top */
 .sub_top {font-size:0; line-height:0; text-align:center; border-bottom:1px solid #eee;}
-.sub_top .st_title {background:url() #7ecdf8 no-repeat center center / cover;}
+.sub_top .st_title {background:url(../image/common/sub_top_bg.png) #7ecdf8 no-repeat center center / cover;}
 .sub_top .st_title h2 {display:inline-block; font-weight:800; color:#fff; letter-spacing:0.48em;}
 .sub_top .lnb > div {max-width:1180px; margin:0 auto;}
 .sub_top .lnb > div > ul {display:table; table-layout:fixed; width:100%;}
@@ -1206,11 +1208,12 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 }
 
 /* modal */
-.modal {display:none; position:fixed; left:0; top:0; right:0; bottom:0; background:rgba(0,0,0,0.64); z-index:900;}
+.modal {display:none; position:fixed; left:0; top:0; right:0; bottom:0; background:rgba(0,0,0,0.64); z-index:900; text-align:center;}
+.modal::before {display:inline-block; content:''; height:100%; vertical-align:middle;}
 .modal.open {display:block;}
-.modal > div {position:relative; background:#fff; border:1px solid #666; border-radius:8px; max-height:100%; margin:0 auto; overflow:hidden;}
-.modal-sm > div {max-width:640px;}
-.modal-xs > div {max-width:480px;}
+.modal > div {display:inline-block; vertical-align:middle; text-align:left; position:relative; background:#fff; border:1px solid #666; border-radius:8px; max-height:100%; margin:0 auto; overflow:hidden;}
+.modal-sm > div {width:100%; max-width:640px;}
+.modal-xs > div {width:100%; max-width:480px;}
 
 .modal > div > .btn_close {width:40px; height:40px; border-radius:50%; position:absolute; right:0; top:0; background:url(../image/common/ico_close_64_b.png) no-repeat #ddd center center / 32%; margin:14px 16px;}
 .modal .m_header {padding:20px 24px; padding-bottom:10px;}
