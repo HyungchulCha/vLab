@@ -1181,7 +1181,7 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 .popup_lab .pl_note > a::before {background:url(../image/common/ico_write_64_w.png) no-repeat center 2px / 100%;}
 .popup_lab .pl_file > a::before {background:url(../image/common/ico_folder_64_w.png) no-repeat center center / 90%;}
 .popup_lab .pl_use > a::before {background:url(../image/common/ico_info_64_w.png) no-repeat center center / 95%;}
-.popup_lab .pl_write > a::before {background:url(../image/common/ico_messenger_64_w.png) no-repeat center center / 90%;}
+.popup_lab .pl_reply > a::before {background:url(../image/common/ico_messenger_64_w.png) no-repeat center center / 90%;}
 .popup_lab .pl_review > a::before {background:url(../image/common/ico_star_64_w.png) no-repeat center center / 90%;}
 
 @media (min-width:1180px) {
