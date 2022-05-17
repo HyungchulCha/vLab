@@ -1100,17 +1100,17 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 @media (min-width:1180px) {
 	.sub_top .st_title {padding:64px 0;}
 	.sub_top .st_title h2 {font-size:36px; line-height:44px;}
-	.sub_top .lnb > div > ul > li > a {font-size:20px; line-height:28px; padding:20px 0;}
+	.sub_top .lnb > div > ul > li > a {font-size:18px; line-height:26px; padding:16px 0;}
 }
 @media (min-width:768px) and (max-width:1179px) {
 	/* .sub_top .st_title {padding:48px 0;}
 	.sub_top .st_title h2 {font-size:28px; line-height:36px;} */
 	.sub_top .st_title {display:none;}
-	.sub_top .lnb > div > ul > li > a {font-size:18px; line-height:26px; padding:18px 0;}
+	.sub_top .lnb > div > ul > li > a {font-size:16px; line-height:24px; padding:14px 0;}
 }
 @media (max-width:767px) {
 	.sub_top .st_title {display:none;}
-	.sub_top .lnb > div > ul > li > a {font-size:16px; line-height:24px; padding:16px 0;}
+	.sub_top .lnb > div > ul > li > a {font-size:14px; line-height:22px; padding:12px 0;}
 }
 
 /* content */
@@ -1206,16 +1206,15 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 }
 
 /* modal */
-.modal {position:fixed; left:0; top:0; right:0; bottom:0; background:rgba(0,0,0,0.64); z-index:900;}
+.modal {display:none; position:fixed; left:0; top:0; right:0; bottom:0; background:rgba(0,0,0,0.64); z-index:900;}
+.modal.open {display:block;}
 .modal > div {position:relative; background:#fff; border:1px solid #666; border-radius:8px; max-height:100%; margin:0 auto;}
 .modal-sm > div {max-width:640px;}
 .modal-xs > div {max-width:480px;}
 
-.modal .btn_close {width:40px; height:40px; border-radius:50%; position:absolute; right:0; top:0; background:url(../image/common/ico_close_64_b.png) no-repeat #ddd center center / 32%; margin:14px 16px;}
-
+.modal > div > .btn_close {width:40px; height:40px; border-radius:50%; position:absolute; right:0; top:0; background:url(../image/common/ico_close_64_b.png) no-repeat #ddd center center / 32%; margin:14px 16px;}
 .modal .m_header {padding:20px 24px; padding-bottom:10px;}
 .modal .m_header h4 {font-size:20px; line-height:28px; font-weight:700;}
-
 .modal .m_content {padding:20px 24px; padding-top:10px; overflow-y:auto;}
 
 /* modal header 58px */

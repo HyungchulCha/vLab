@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <title>vLab</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../css/vl-base.css">
+    <link rel="stylesheet" href="../css/vl-content.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+
+    <script src="../js/jquery-3.4.2.min.js"></script>
+    <script src="../js/jquery.throttle-debounce.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/vl-base.js"></script>
+    <script src="../js/vl-content.js"></script>
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="snb">
+            <a href="#container">본문으로 바로가기</a>
+            <a href="#tgl_menu">주메뉴 바로가기</a>
+        </div>
+        <div class="header">
+            <div>
+                <div class="fl_l">
+                    <h1 class="h_logo"><a href=""><span class="hdn">가상연구소</span></a></h1>
+                </div>
+                <div class="fl_r">
+                    <div class="h_search">
+                        <a href="" class="tgl_search"><span class="hdn">검색열기</span></a>
+                    </div>
+                    <div class="h_user dp_n_t dp_n_m">
+
+                        <!-- s: before login -->
+                        <!-- <a href="" class="btn_login"><span class="hdn">로그인하기</span></a> -->
+                        <!-- e: before login -->
+
+                        <!-- s: after login -->
+                        <a href="" class="tgl_user"><span class="hdn">마이페이지열기</span></a>
+                        <div class="mm">
+                            <div class="mm_user"><i></i><p><span>고구마말랭</span><em>님</em></p></div>
+                            <div class="mm_list">
+                                <ul>
+                                    <li><a href="">마이페이지</a></li>
+                                    <li><a href="">회원정보수정</a></li>
+                                    <li><a href="">내 파일</a></li>
+                                    <li><a href="">로그아웃</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- e: after login -->
+
+                    </div>
+                    <div class="h_menu">
+                        <a href="" class="tgl_menu" id="tgl_menu"><span class="hdn">전체메뉴열기</span></a>
+                        <div class="gn dp_n_t dp_n_m">
+                            <a class="btn_close"><span class="hdn">전체메뉴닫기</span></a>
+                            <div class="gn_list">
+                                <ul>
+                                    <li>
+                                        <a href="">실험실 바로가기</a>
+                                        <div>
+                                            <ul>
+                                                <li><a href="">화학 실험실</a></li>
+                                                <li><a href="">물리 실험실</a></li>
+                                                <li><a href="">수학 실험실</a></li>
+                                                <li><a href="">생물 실험실</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="">커뮤니티</a>
+                                        <div>
+                                            <ul>
+                                                <li><a href="">공지사항</a></li>
+                                                <li><a href="">묻고 답하기</a></li>
+                                                <li><a href="">자료실</a></li>
+                                                <li><a href="">보도자료</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="">가상실험실 정보</a>
+                                        <div>
+                                            <ul>
+                                                <li><a href="">가상실험실 소개</a></li>
+                                                <li><a href="">콘텐츠 작성 가이드</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="global_search">
+            <div>
+                <div class="gs_logo dp_n_t dp_n_m"><a href=""><span class="hdn">가상연구소</span></a></div>
+                <div class="gs_t">
+                    <a href="" class="btn_close"><span class="hdn">검색닫기</span></a>
+                    <h2 class="gs_title dp_n_p">Search</h2>
+                    <div class="gs_form">
+                        <span class="hdn">검색어입력</span>
+                        <input type="text" placeholder="검색어를 입력하세요." />
+                        <a href="" class="btn_search"><span class="hdn">검색하기</span></a>
+                    </div>
+                </div>
+                <div class="gs_b">
+                    <h3 class="gs_fv_title">요즘 많이 찾아봐요!</h3>
+                    <div class="gs_fv_list">
+                        <a href="">기체와 액체 작용</a>
+                        <a href="">작용 반작용의 법칙</a>
+                        <a href="">식물에게 음악을 들려주면</a>
+                        <a href="">기체와 액체 작용</a>
+                        <a href="">작용 반작용의 법칙</a>
+                        <a href="">식물에게 음악을 들려주면</a>
+                        <a href="">기체와 액체 작용</a>
+                        <a href="">작용 반작용의 법칙</a>
+                        <a href="">식물에게 음악을 들려주면</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="global_menu">
+            <a href="" class="btn_close"><span class="hdn">전체메뉴닫기</span></a>
+            <div class="gm_user">
+                <div class="gmu_t">
+
+                    <!-- s: before login -->
+                    <!-- <a href="" class="btn_login">로그인하세요</a> -->
+                    <!-- e: before login -->
+
+                    <!-- s: after login -->
+                    <p><i></i><span>고구마말랭</span></p>
+                    <!-- e: after login -->
+                    
+                </div>
+
+                <!-- s: after login -->
+                <div class="gmu_b">
+                    <!-- <a>마이페이지</a> -->
+                    <a>정보수정</a>
+                    <a>내 파일</a>
+                    <a>시스템 관리</a>
+                    <a>로그아웃</a>
+                </div>
+                <!-- e: after login -->
+                
+            </div>
+            <div class="gm_list">
+                <ul>
+                    <li>
+                        <a href="">실험실 바로가기</a>
+                        <div>
+                            <ul>
+                                <li><a href="">화힉 실험실</a></li>
+                                <li><a href="">물리 실험실</a></li>
+                                <li><a href="">수학 실험실</a></li>
+                                <li><a href="">생물 실험실</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">커뮤니티</a>
+                        <div>
+                            <ul>
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">묻고 답하기</a></li>
+                                <li><a href="">자료실</a></li>
+                                <li><a href="">보도자료</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">가상실험실 정보</a>
+                        <div>
+                            <ul>
+                                <li><a href="">가상실험실 소개</a></li>
+                                <li><a href="">콘텐츠 작성 가이드</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container" id="container">
+            <div class="sub_top">
+                <div class="st_title dp_n_m"><h2>SEARCH</h2></div>
+                <div class="lnb">
+                    <div>
+                        <ul>
+                            <li class="on"><a href="">가상실험실 소개</a></li>
+                            <li><a href="">콘텐츠 작성 가이드</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub_content">
+                <div class="sub_content_title"><h3>서브타이틀</h3></div>
+
+                <!-- s: content-->
+
+                <div class="board_edit">
+                    <div class="l_t_b_t">
+                        <div>
+                            <div class="form_area form_sm">
+                                <ul>
+                                    <li>
+                                        <div class="fa_t"><span class="fa_title ico_essential">제목</span></div>
+                                        <input type="text" name="" id="">
+                                    </li>
+                                    <li>
+                                        <div class="fa_t"><span class="fa_title ico_essential">내용</span></div>
+                                        <textarea></textarea>
+                                    </li>
+                                    <li>
+                                        <div class="fa_t"><span class="fa_title ico_essential">공지글 등록여부</span></div>
+                                        <div class="f_radio mg_r16"><input type="radio" name="" id=""><label for="" class="f_txt">예</label></div>
+                                        <div class="f_radio mg_r16"><input type="radio" name="" id=""><label for="" class="f_txt">아니오</label></div>
+                                    </li>
+                                    <li>
+                                        <div class="fa_t"><span class="fa_title ico_essential">기간설정</span></div>
+                                        <div class="d_tbl">
+                                            <div><div class="f_srch"><input type="text" name="" id=""><a href="" class="btn_search ico_calendar"></a></div></div>
+                                            <div class="f_tbl_dash">-</div>
+                                            <div><div class="f_srch"><input type="text" name="" id=""><a href="" class="btn_search ico_calendar"></a></div></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fa_t"><span class="fa_title ico_essential">파일 업로드</span></div>
+                                        <div class="d_tbl">
+                                            <div><input type="text" name="" id=""></div>
+                                            <div>
+                                                <div class="ib_w"><a href="" class="btn btn_sm btn_black"><span>파일 업로드</span></a></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="form_area form_sm">
+                                <ul>
+                                    <li>
+                                        <div class="fa_t"><span class="fa_title ico_essential">카테고리</span></div>
+                                        <div class="d_tbl">
+                                            <div><select name="" id=""><option value="">학교</option></select></div>
+                                            <div><select name="" id=""><option value="">초등학교</option></select></div>
+                                            <div>
+                                                <div class="ib_w"><a href="" class="btn btn_sm btn_black"><span>추가</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="d_tbl mg_t8">
+                                            <div><select name="" id=""><option value="">학교</option></select></div>
+                                            <div><select name="" id=""><option value="">중학교</option></select></div>
+                                            <div>
+                                                <div class="ib_w"><a href="" class="btn btn_sm btn_gray"><span>삭제</span></a></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fa_t"><span class="fa_title ico_essential">태그</span></div>
+                                        <div class="d_tbl">
+                                            <div><input type="text" name="" id=""></div>
+                                            <div>
+                                                <div class="ib_w"><a href="" class="btn btn_sm btn_black"><span>등록</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="s_btn mg_t8">
+                                            <div class="fl_l">
+                                                <a href="" class="btn btn_xs btn_line_gray"><span>#sdfgasdfg</span></a>
+                                                <a href="" class="btn btn_xs btn_line_gray"><span>#sdfg</span></a>
+                                                <a href="" class="btn btn_xs btn_line_gray"><span>#sdfgasdfg</span></a>
+                                                <a href="" class="btn btn_xs btn_line_gray"><span>#sdfg</span></a>
+                                                <a href="" class="btn btn_xs btn_line_gray"><span>#sdfgasdfg</span></a>
+                                                <a href="" class="btn btn_xs btn_line_gray"><span>#sdfg</span></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="s_btn mg_t24">
+                    <a href="" class="btn btn_md btn_gray"><span>취소</span></a>
+                    <a href="" class="btn btn_md btn_blue"><span>등록</span></a>
+                </div>
+
+                <div class="board_view">
+                    <div class="bv_t">
+                        <h3><strong class="tc_2564e7">Notice</strong>업데이트 사항을 안내해드립니다.업데이트 사항을 안내해드립니다.업데이트 사항을 안내해드립니다.업데이트 사항을 안내해드립니다.업데이트 사항을 안내해드립니다.업데이트 사항을 안내해드립니다.업데이트 사항을 안내해드립니다.</h3>
+                        <div class="bv_info">
+                            <span class="bli_star"><i>★</i><strong>4.5</strong></span>
+                            <span>2022.10.10 10:10:10</span>
+                            <span>조회 234</span>
+                            <span>좋아요 2345234</span>
+                            <span>댓글 234</span>
+                            <span>고구마말랭</span>
+                        </div>
+                    </div>
+                    <div class="bv_b">
+                        <div class="bv_content"><p class="text_14">생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실</p></div>
+                        <div class="s_btn mg_t24">
+                            <a href="" class="btn btn_md btn_line_gray on"><i class="ico_heart"></i><span>좋아요</span></a>
+                        </div>
+                        <div class="bv_attach">
+                            <ul>
+                                <li><a href="">생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실.hwp</a></li>
+                                <li><a href="">생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실.hwp</a></li>
+                                <li><a href="">생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실.hwp</a></li>
+                                <li><a href="">생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실.hwp</a></li>
+                                <li><a href="">생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실.hwp</a></li>
+                                <li><a href="">생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실.hwp</a></li>
+                                <li><a href="">생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실.hwp</a></li>
+                                <li><a href="">생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실생물 실험실.hwp</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="s_btn mg_t24">
+                    <div class="fl_l">
+                        <a href="" class="btn btn_md btn_line_black"><span>목록</span></a>
+                    </div>
+                    <div class="fl_r">
+                        <a href="" class="btn btn_md btn_gray"><span>이전글</span></a>
+                        <a href="" class="btn btn_md btn_blue"><span>다음글</span></a>
+                    </div>
+                </div>
+
+                <div class="mg_t48">
+                    <div class="reply_regist">
+                        <div>
+                            <textarea placeholder="답글을 입력하세요!"></textarea>
+                            <a href="" class="btn btn_md btn_blue"><span>등록하기</span></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <h4 class="text_24-22-20 fw_700 mg_t48">댓글 <span class="tc_2564e7">4567845678</span></h4>
+
+                <div class="mg_t16">
+                    <div class="reply_box">
+                        <i class="rb_thumb"></i>
+                        <div class="rb_user">
+                            <span class="rbu_star"><strong>★</strong><em>4.5</em></span>
+                            <span class="rbu_name">ckgudcjf</span>
+                            <span class="rbu_time">2022.10.10 13:13:13</span>
+                        </div>
+                        <p class="rb_descript text_16-15-14 tc_666666 mg_t8">매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.</p>
+                        <div class="rb_info">
+                            <a href="" class="rbi_like"><span>좋아요</span><em>34567</em></a>
+                            <a href="" class="rbi_count"><span>답글</span><em>34567</em></a>
+                            <a href="" class="rbi_reply"><span>답글쓰기</span></a>
+                        </div>
+                        <div class="rb_btn">
+                            <a href="" class="rbb_like on"></a>
+                            <a href="" class="btn_more"></a>
+                        </div>
+                    </div>
+                    <div class="reply_box reply">
+                        <i class="rb_thumb"></i>
+                        <div class="rb_user">
+                            <span class="rbu_star"><strong>★</strong><em>4.5</em></span>
+                            <span class="rbu_name">ckgudcjfckgudcjfckgudcjfckgudcjfckgudcjf</span>
+                            <span class="rbu_time">2022.10.10 13:13:13</span>
+                        </div>
+                        <p class="rb_descript text_16-15-14 tc_666666 mg_t8">매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.</p>
+                        <div class="rb_info">
+                            <a href="" class="rbi_like"><span>좋아요</span><em>34567</em></a>
+                        </div>
+                        <div class="rb_btn">
+                            <a href="" class="rbb_like"></a>
+                            <a href="" class="btn_more"></a>
+                        </div>
+                    </div>
+                    <div class="reply_box">
+                        <i class="rb_thumb"></i>
+                        <div class="rb_user">
+                            <span class="rbu_star"><strong>★</strong><em>4.5</em></span>
+                            <span class="rbu_name">ckgudcjfckgudcjf</span>
+                            <span class="rbu_time">2022.10.10 13:13:13</span>
+                        </div>
+                        <p class="rb_descript text_16-15-14 tc_666666 mg_t8">매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.</p>
+                        <div class="rb_info">
+                            <a href="" class="rbi_like"><span>좋아요</span><em>34567</em></a>
+                            <a href="" class="rbi_count"><span>답글</span><em>34567</em></a>
+                            <a href="" class="rbi_reply"><span>답글쓰기</span></a>
+                        </div>
+                        <div class="rb_btn">
+                            <a href="" class="rbb_like"></a>
+                            <a href="" class="btn_more"></a>
+                        </div>
+                    </div>
+                    <div class="reply_reply">
+                        <div>
+                            <textarea placeholder="답글을 입력하세요!"></textarea>
+                            <a href="" class="btn btn_md btn_blue"><span>등록하기</span></a>
+                        </div>
+                    </div>
+                    <div class="reply_box reply">
+                        <i class="rb_thumb"></i>
+                        <div class="rb_user">
+                            <span class="rbu_star"><strong>★</strong><em>4.5</em></span>
+                            <span class="rbu_name">ckgudcjf</span>
+                            <span class="rbu_time">2022.10.10 13:13:13</span>
+                        </div>
+                        <p class="rb_descript text_16-15-14 tc_666666 mg_t8">매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.매달 빠른 업데이트 해주셔서 감사합니다.</p>
+                        <div class="rb_info">
+                            <a href="" class="rbi_like"><span>좋아요</span><em>34567</em></a>
+                        </div>
+                        <div class="rb_btn">
+                            <a href="" class="rbb_like"></a>
+                            <a href="" class="btn_more"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="s_btn mg_t24"><a href="" class="btn btn_md btn_black"><span>More</span><i class="ico_plus"></i></a></div>
+
+                <div class="board_search form_sm">
+                    <div class="f_srch">
+                        <input type="text" name="" id=""><a href="" class="btn_search ico_search"></a>
+                    </div>
+                </div>
+
+                <div class="board_sort form_sm cl_b_aftr">
+                    <div class="fl_l">
+                        <div class="f_radio mg_r16"><input type="radio" name="" id=""><label for="" class="f_txt">서비스 중인 콘텐츠 보기</label></div>
+                        <div class="f_radio mg_r16"><input type="radio" name="" id=""><label for="" class="f_txt">심사 중인 콘텐츠 보기</label></div>
+                    </div>
+                    <div class="fl_r">
+                        <select class="mg_l8"><option value="">최신순</option></select>
+                        <select class="mg_l8"><option value="">전체기간</option></select>
+                    </div>
+                </div>
+
+                <div class="board_list">
+                    <ul>
+                        <li class="bl_bgblue">
+                            <div>
+                                <span class="tag_blue">평가 및 리뷰</span>
+                                <a href="" class="bl_link">작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을</a>
+                                <div class="bl_info">
+                                    <span class="bli_star"><i>★</i><strong>4.5</strong></span>
+                                    <span>2022.10.10 10:10:10</span>
+                                    <span>조회 234</span>
+                                    <span>좋아요 2345234</span>
+                                    <span>댓글 234</span>
+                                    <span>고구마말랭</span>
+                                </div>
+                                <p class="bl_reply"><i>RE</i><span>작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을</span></p>
+                                <i class="ico_file"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="tag_blue">묻고답하기</span>
+                                <a href="" class="bl_link">작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을</a>
+                                <div class="bl_info">
+                                    <span class="bli_star"><i>★</i><strong>4.5</strong></span>
+                                    <span>2022.10.10 10:10:10</span>
+                                    <span>조회 234</span>
+                                    <span>좋아요 2345234</span>
+                                    <span>댓글 234</span>
+                                    <span>고구마말랭</span>
+                                </div>
+                                <p class="bl_reply"><i>RE</i><span>작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을</span></p>
+                                <i class="ico_file"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="board_list board_list_circle">
+                    <ul>
+                        <li>
+                            <div>
+                                <i class="ico_cont_01"></i>
+                                <a href="" class="bl_link">작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을</a>
+                                <div class="bl_info">
+                                    <span class="bli_star"><i>★</i><strong>4.5</strong></span>
+                                    <span>2022.10.10 10:10:10</span>
+                                    <span>조회 234</span>
+                                    <span>좋아요 2345234</span>
+                                    <span>댓글 234</span>
+                                    <span>고구마말랭</span>
+                                </div>
+                                <p class="bl_reply"><i>RE</i><span>작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을</span></p>
+                                <i class="ico_file"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <i class="ico_cont_02"></i>
+                                <a href="" class="bl_link">작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을</a>
+                                <div class="bl_info">
+                                    <span class="bli_star"><i>★</i><strong>4.5</strong></span>
+                                    <span>2022.10.10 10:10:10</span>
+                                    <span>조회 234</span>
+                                    <span>좋아요 2345234</span>
+                                    <span>댓글 234</span>
+                                    <span>고구마말랭</span>
+                                </div>
+                                <p class="bl_reply"><i>RE</i><span>작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을</span></p>
+                                <i class="ico_file"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <i class="ico_cont_03"></i>
+                                <a href="" class="bl_link">작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을</a>
+                                <div class="bl_info">
+                                    <span class="bli_star"><i>★</i><strong>4.5</strong></span>
+                                    <span>2022.10.10 10:10:10</span>
+                                    <span>조회 234</span>
+                                    <span>좋아요 2345234</span>
+                                    <span>댓글 234</span>
+                                    <span>고구마말랭</span>
+                                </div>
+                                <p class="bl_reply"><i>RE</i><span>작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을</span></p>
+                                <i class="ico_file"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <i class="ico_cont_04"></i>
+                                <a href="" class="bl_link">작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을</a>
+                                <div class="bl_info">
+                                    <span class="bli_star"><i>★</i><strong>4.5</strong></span>
+                                    <span>2022.10.10 10:10:10</span>
+                                    <span>조회 234</span>
+                                    <span>좋아요 2345234</span>
+                                    <span>댓글 234</span>
+                                    <span>고구마말랭</span>
+                                </div>
+                                <p class="bl_reply"><i>RE</i><span>작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을작용 반작용 법칙을</span></p>
+                                <i class="ico_file"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="paging">
+                    <a href="" class="p_first" title="처음"><span class="hdn">처음페이지</span></a>
+                    <a href="" class="p_prev" title="이전"><span class="hdn">이전페이지</span></a>
+                    <strong>1</strong>
+                    <a href="">2</a>
+                    <a href="">3</a>
+                    <a href="">4</a>
+                    <a href="">5</a>
+                    <a href="">6</a>
+                    <a href="">7</a>
+                    <a href="">8</a>
+                    <a href="">9</a>
+                    <a href="" class="p_next" title="다음"><span class="hdn">다음페이지</span></a>
+                    <a href="" class="p_last" title="끝"><span class="hdn">끝페이지</span></a>
+                </div>
+
+                <div class="s_btn mg_t24"><div class="fl_r"><a href="" class="btn btn_md btn_black"><i class="ico_write"></i><span>글쓰기</span></a></div></div>
+
+                <!-- e: content-->
+
+            </div>
+
+        </div>
+        <div class="footer">
+            <div class="fnb">
+                <div>
+                    <ul>
+                        <li><a href="">이용약관</a></li>
+                        <li><a href="">개인정보처리방침</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="f_b">
+                <div>
+                    <h2 class="f_logo"><span class="hdn">가상연구소</span></h2>
+                    <p class="f_address">(우)34141 대전광역시 유성구 대학로 245 한국과학기술정보연구원 / 전화번호 : 042) 869 - 1004, 1234 / 팩스 : 042) 869 - 1091</p>
+                    <p class="f_copyright">COPYRIGHT © <strong>KISTI</strong>. All Rights Resserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body_bg"><span class="hdn">검은배경</span></div>
+    <div class="s_check">
+        <div class="sc_p dp_n_t dp_n_m"><span class="hdn">너비 1180px 이상</span></div>
+        <div class="sc_t dp_n_p dp_n_m"><span class="hdn">너비 768px - 1179px</span></div>
+        <div class="sc_m dp_n_p dp_n_t"><span class="hdn">너비 767px 이하</span></div>
+    </div>
+</body>
+</html>

@@ -454,8 +454,9 @@ function domRatio(th, ratio) {
     afterHasCheck('.ib_w', inlineBlockWidth)
 */
 function inlineBlockWidth() {
+    var isBtn = $(this).find('.btn').length;
     $(this).parent().css({
-        'width': $(this).outerWidth()
+        'width': isBtn > 0 ? ($(this).outerWidth() + 4) : $(this).outerWidth()
     });
 }
 /* 
@@ -648,6 +649,26 @@ function headerHandle() {
     });
 }
 
+function modalTgl() {
+    var btnModal = $('.btn_modal');
+
+    btnModal.on('click', function(){
+        var target = $(this).attr('data-modal-target');
+        $('#' + target).addClass('open');
+        $('#' + target).find('.btn_close').first().focus();
+        return false;
+    });
+
+    $('.modal .btn_close').on('click', function(){
+        var 
+            thP = $(this).parents('.modal'),
+            target = thP.attr('id');
+        thP.removeClass('open');
+        $("[data-modal-target='" + target + "']").focus();
+        return false;
+    });
+}
+
 $(document).ready(function(){
 
     headerHandle();
@@ -660,5 +681,7 @@ $(document).ready(function(){
     afterHasCheck('.f_unit', fUnitTextWidth);
     //afterHasCheck('.form_area', formAreaTitleWidth);
     afterHasCheck('.s_tab', subTabScroll);
+
+    modalTgl();
 
 });
