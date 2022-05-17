@@ -656,6 +656,7 @@ function modalTgl() {
         var target = $(this).attr('data-modal-target');
         $('#' + target).addClass('open');
         $('#' + target).find('.btn_close').first().focus();
+        afterHasCheck('.ib_w', inlineBlockWidth);
         return false;
     });
 
