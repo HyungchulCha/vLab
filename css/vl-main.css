@@ -263,3 +263,14 @@
     .m_notice a > span {display:none;}
     .m_notice a > em {font-size:12px; line-height:20px; padding:12px 0; margin-top:16px;}
 }
+
+/* modal labview lablist */
+.modal-lablist .lab_link {padding-top:40px !important; padding-bottom:40px !important;}
+@media (min-width:1180px) {
+    .modal-labview .m_content {padding-top:24px !important;}
+    .modal-labview .m_content .lab_view .lv_b {padding-bottom:64px !important;}
+}
+@media (min-width:768px) and (max-width:1179px) {
+}
+@media (max-width:767px) {
+}

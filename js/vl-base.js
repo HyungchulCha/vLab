@@ -368,9 +368,9 @@ function listToggle() {
 
     !isOpen ? ($(this).append('<em class="hdn">열기</em>')) : ($(this).append('<em class="hdn">닫기</em>'));
 
-    th.click(function() {
+    th.on('click', function() {
 
-        var thP = $(this).parents('.lt_p'),
+        var thP = $(this).parent('.lt_p'),
             isOpen = thP.hasClass("open"),
             thTxt = $(this).find(".hdn");
 
@@ -649,6 +649,9 @@ function headerHandle() {
     });
 }
 
+var modalLabViewCount = 0;
+var modalLabListCount = 0;
+
 function modalTgl() {
     var btnModal = $('.btn_modal');
 
@@ -657,7 +660,25 @@ function modalTgl() {
         $('#' + target).addClass('open');
         $('#' + target).find('.btn_close').first().focus();
         $('body').addClass('of_h');
+
         afterHasCheck('.ib_w', inlineBlockWidth);
+
+        if ($('.modal-labview').length > 0 && modalLabViewCount === 0) {
+            setTimeout(function(){
+                afterHasCheck('.modal-labview .lab_view .lv_t .lvt_img > i', domRatio, true, (3 / 4));
+                fnSlide({ dom: '.modal-labview .lab_view .lv_slide', loop: false, auto: false, center: false });
+                afterHasCheck('.modal-labview .lab_view .lv_slide .s_w .sw_l > div > a', domRatio, true, (1 / 1));
+                modalLabViewCount = 1;
+            }, 160);            
+        }
+
+        if ($('.modal-lablist').length > 0 && modalLabListCount === 0) {
+            setTimeout(function(){
+                afterHasCheck('.modal-lablist .lab_card .lc_img', domRatio, true, (3 / 4));
+                modalLabListCount = 1;
+            }, 160);
+        }
+
         return false;
     });
 
@@ -670,6 +691,34 @@ function modalTgl() {
         $("[data-modal-target='" + target + "']").focus();
         return false;
     });
+}
+
+function popupLabReview() {
+    var btnReviewTgl = $('.pl_review > a'),
+    plr = $('.popup_lab_review')
+    btnClose = plr.find('.btn_close'),
+    bd = $('body');
+
+    if (plr.length > 0) {
+        btnReviewTgl.on('click', function(){
+            plr.addClass('open');
+            bd.addClass('of_h');
+            btnClose.focus();
+            return false;
+        });
+        btnClose.on('click', function(){
+            plr.removeClass('open');
+            bd.removeClass('of_h');
+            btnReviewTgl.focus();
+            return false;
+        });
+        $(window).on('resize', $.debounce(80, function(){
+            if (sCheck() !== 'p' && plr.hasClass('open')) {
+                plr.removeClass('open');
+                bd.removeClass('of_h');
+            }
+        }));
+    }    
 }
 
 $(document).ready(function(){
@@ -686,5 +735,6 @@ $(document).ready(function(){
     afterHasCheck('.s_tab', subTabScroll);
 
     modalTgl();
+    popupLabReview();
 
 });
