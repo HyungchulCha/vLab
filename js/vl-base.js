@@ -721,6 +721,36 @@ function popupLabReview() {
     }    
 }
 
+function popupLabHeaderTgl() {
+    var pl = $('.popup_lab'),
+    plh = pl.find('.p_header'),
+    plhEvent;
+
+    if (pl.length > 0) {
+
+        sCheck() === 'p' ? plh.removeClass('over') : plh.addClass('over');
+
+        plh.on('mouseenter', function(){
+            if (sCheck() === 'p') {
+                clearTimeout(plhEvent);
+                plh.addClass('over');
+            }
+        });
+        plh.on('mouseleave', function(){
+            if (sCheck() === 'p') {
+                plhEvent = setTimeout(function(){
+                    plh.removeClass('over');
+                }, 1000);
+            }
+        });
+
+        $(window).on('resize', $.debounce(80, function(){
+            sCheck() === 'p' ? plh.removeClass('over') : plh.addClass('over');
+        }));
+        
+    }
+}
+
 $(document).ready(function(){
 
     headerHandle();
@@ -736,5 +766,6 @@ $(document).ready(function(){
 
     modalTgl();
     popupLabReview();
+    popupLabHeaderTgl();
 
 });
