@@ -11,7 +11,7 @@ function mScroll() {
     var win = $(window),
         hd = $('.header');
 
-    win.stop().scroll(function () {
+    win.scroll(function () {
         if (win.scrollTop() >= (mWinH - ($('.header').outerHeight()))) {
             hd.addClass('hd_w');
         } else {
@@ -27,7 +27,7 @@ function mVisualHeight() {
     $(this).css('height', $(window).outerHeight());
 }
 function mVisualScroll() {
-    $('.m_visual').stop().on('mousewheel', function (e) {
+    $('.m_visual').on('mousewheel', function (e) {
         e.deltaY === -1 && $('html').animate({ scrollTop: (mWinH - ($('.header').outerHeight())) }, 480, 'easeOutCubic');
     });
 }
@@ -43,11 +43,12 @@ $(document).ready(function () {
     afterHasCheck('.main', mWinHeight, true);
     mScroll();
     afterHasCheck('.m_visual', mVisualHeight, true);
-    mVisualScroll();
-    mVisualDown();
     fnSlide({ dom: '.m_pick .mp_slide', loop: false, auto: false, center: false });
     afterHasCheck('.m_pick .mp_img', domRatio, true, (3 / 4));
     fnSlide({ dom: '.m_news .mn_slide', loop: true, auto: false, center: true, breakPoint: ['p', 't'] });
+
+    mVisualScroll();
+    mVisualDown();
 
 });
 
