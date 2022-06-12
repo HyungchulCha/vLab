@@ -8,11 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="../css/vla-base.css">
+    <link rel="stylesheet" href="../css/vla-main.css">
+    <link rel="stylesheet" href="../css/vla-main.css">
 
     <script src="../js/jquery-3.4.2.min.js"></script>
     <script src="../js/jquery.throttle-debounce.min.js"></script>
-    <script src="../js/swiper.min.js"></script>
+    <!-- <script src="../js/chart.js"></script> -->
+    <script src="../js/Chart.min.js"></script>
+    <script src="../js/chartjs-plugin-datalabels.min.js"></script>
+
     <script src="../js/vla-base.js"></script>
+    <script src="../js/vla-main.js"></script>
+    <!-- <script src="../js/chart_en.js"></script> -->
 
 </head>
 <body>
@@ -98,223 +105,216 @@
             </div>
             <div class="lbr_c">
                 <div class="content">
-                    <div class="sub_top">
-                        <h3>서브타이틀</h3>
-                        <div class="st_btns"><a href="" class="btn btn_sm btn_navy"><i class="ico_back"></i><span>목록</span></a></div>
+                    
+                    <div class="m_number">
+                        <div><div class="d_va_m"><div><strong>23860</strong><span>일 방문 데이터</span></div></div></div>
+                        <div><div class="d_va_m"><div><strong>23860</strong><span>일 방문 데이터</span></div></div></div>
+                        <div><div class="d_va_m"><div><strong>23860</strong><span>일 방문 데이터</span></div></div></div>
                     </div>
-                    <div class="tab_tbl">
-                        <ul>
-                            <li class="on"><a href=""><span>sdfgsdfrgsdrgder</span></a></li>
-                            <li><a href=""><span>sdfgsdfrgsdrgder</span></a></li>
-                            <li><a href=""><span>sdfgsdfrgsdrgder</span></a></li>
-                            <li><a href=""><span>sdfgsdfrgsdrgder</span></a></li>
-                        </ul>
-                    </div>
-                    <div class="board_top dlr_va_m">
-                        <div><h4 class="text_24 fw_700">기본정보</h4><p class="text_14 tc_666666 mg_l16">총 <em class="tc_red">15</em>건의 심사대기가 있습니다.</p></div>
-                        <div><p class="text_14 tc_666666"><em class="tc_red">*</em> 표기는 필수 입력사항입니다.</p></div>
-                    </div>
-                    <div class="search_top form_sm">
-                        <ul>
-                            <li>
-                                <span class="st_title">항목</span>
-                                <select name="" id=""><option value="">전체</option></select>
-                            </li>
-                            <li>
-                                <span class="st_title">키워드</span>
-                                <input type="text" name="" id="">
-                            </li>
-                            <li class="w_100p">
-                                <span class="st_title ico_essential">등록구분</span>
-                                <div class="f_radio"><input type="radio" name="" id=""><label for="" class="f_txt">서비스 중인 콘텐츠 보기</label></div>
-                                <div class="f_radio mg_l16"><input type="radio" name="" id=""><label for="" class="f_txt">심사 중인 콘텐츠 보기</label></div>
-                            </li>
-                        </ul>
-                        <div class="st_btns">
-                            <a href="" class="btn btn_sm btn_navy"><span>조회</span></a>
-                            <a href="" class="btn btn_sm btn_black mg_l8"><span>초기화</span></a>
-                        </div>
-                    </div>
-                    <div class="board_list">
-                        <table>
-                            <colgroup>
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th>구분</th>
-                                    <th>제목</th>
-                                    <th>별점</th>
-                                    <th>작성자</th>
-                                    <th>작성일시</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="fslh_0"><i class="ico_lab01"></i></td>
-                                    <td class="fslh_0"><a href="" class="bl_link">여름에 만들어 본 인공눈으로</a></td>
-                                    <td class="fslh_0"><p class="ico_star"><i>★</i><span>4.5</span></p></td>
-                                    <td>한국과학기술정보연구원</td>
-                                    <td>2020.10.10 10:10:10</td>
-                                </tr>
-                                <tr>
-                                    <td class="fslh_0"><i class="ico_lab02"></i></td>
-                                    <td class="fslh_0"><a href="" class="bl_link">여름에 만들어 본 인공눈으로</a></td>
-                                    <td class="fslh_0"><p class="ico_star"><i>★</i><span>4.5</span></p></td>
-                                    <td>한국과학기술정보연구원</td>
-                                    <td>2020.10.10 10:10:10</td>
-                                </tr>
-                                <tr>
-                                    <td class="fslh_0"><i class="ico_lab03"></i></td>
-                                    <td class="fslh_0"><a href="" class="bl_link">여름에 만들어 본 인공눈으로</a></td>
-                                    <td class="fslh_0"><p class="ico_star"><i>★</i><span>4.5</span></p></td>
-                                    <td>한국과학기술정보연구원</td>
-                                    <td>2020.10.10 10:10:10</td>
-                                </tr>
-                                <tr>
-                                    <td class="fslh_0"><i class="ico_lab04"></i></td>
-                                    <td class="fslh_0"><a href="" class="bl_link">여름에 만들어 본 인공눈으로</a></td>
-                                    <td class="fslh_0"><p class="ico_star"><i>★</i><span>4.5</span></p></td>
-                                    <td>한국과학기술정보연구원</td>
-                                    <td>2020.10.10 10:10:10</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="d_tbl va_t">
-                        <div class="w_60p">
-                            <div class="board_edit form_sm">
-                                <ul>
-                                    <li>
-                                        <div>
-                                            <div><span class="be_title ico_essential">제목</span></div>
-                                            <div>
-                                                <p class="f_txt">asrgaWERSfgaWESrfgaWESRgaWErfg</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div>
-                                        <div><span class="be_title ico_essential">설명</span></div>
-                                        <div>
-                                            <textarea></textarea>
-                                        </div>
-                                    </div>
-                                    </li>
-                                    <li>
-                                        <div>
-                                        <div><span class="be_title ico_essential">설명</span></div>
-                                        <div>
-                                            <textarea></textarea>
-                                        </div>
-                                    </div>
-                                    </li>
-                                    <li>
-                                        <div>
-                                        <div><span class="be_title ico_essential">외부실행 URL</span></div>
-                                        <div>
-                                            <p class="f_txt tc_navy">asrgaWERSfgaWESrfgaWESRgaWErfg</p>
-                                        </div>
-                                    </div>
-                                    </li>
-                                    <li>
-                                        <div>
-                                        <div><span class="be_title ico_essential">설명</span></div>
-                                        <div>
-                                            <textarea></textarea>
-                                        </div>
-                                    </div>
-                                    </li>
-                                    <li>
-                                        <div>
-                                        <div><span class="be_title ico_essential">분야</span></div>
-                                        <div>
-                                            <a href="" class="btn btn_sm btn_line_black"><span>화학</span></a>
-                                            <a href="" class="btn btn_sm btn_line_black mg_l4"><span>물리</span></a>
-                                        </div>
-                                    </div>
-                                    </li>
-                                    <li>
-                                        <div>
-                                        <div><span class="be_title ico_essential">수준</span></div>
-                                        <div>
-                                            <a href="" class="btn btn_sm btn_line_black"><span>화학</span></a>
-                                        </div>
-                                    </div>
-                                    </li>
-                                    <li>
-                                        <div>
-                                        <div><span class="be_title tc_red">심사의견</span></div>
-                                        <div>
-                                            <textarea></textarea>
-                                        </div>
-                                    </div>
-                                    </li>
-                                </ul>
+
+                    <div class="m_panel m_panel_w">
+                        <div class="mp_t">
+                            <div class="fl_l"><h3>월별 회원수 변화</h3></div>
+                            <div class="fl_r">
+                                <div class="mpt_btns">
+                                    <a href="" class="mptb_ico_share"></a>
+                                    <a href="" class="mptb_ico_save"></a>
+                                    <a href="" class="mptb_ico_refresh"></a>
+                                    <a href="" class="mptb_ico_download"></a>
+                                    <a href="" class="mptb_ico_sort"></a>
+                                </div>
                             </div>
                         </div>
-                        <div class="pd_l16">
-                            <div class="board_edit form_sm">
-                                <ul>
-                                    <li>
-                                        <div style="height:774px;">
-                                        <div><span class="be_title ico_essential">이미지 & 동영상</span></div>
-                                        <div>
-                                            <div class="be_imglist">
-                                                <ul>
-                                                    <li><a href=""></a></li>
-                                                    <li><a href=""></a></li>
-                                                    <li><a href=""></a></li>
-                                                    <li><a href=""></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </li>
-                                    <li>
-                                        <div>
-                                        <div><span class="be_title ico_essential">콘텐츠 상세보기</span></div>
-                                        <div>
-                                            <a href="" class="btn btn_sm btn_black"><span>바로가기</span></a>
-                                        </div>
-                                    </div>
-                                    </li>
-                                </ul>
+                        <div class="mp_b">
+                            <div class="mpb_chart" style="height:337px;">
+                                <canvas id="m_lineBarChart01"></canvas>
                             </div>
-                        </div>
-                    </div>
-                    <div class="board_bottom cl_b_aftr ta_c">
-                        <div class="fl_l">
-                            <div class="form_sm">
-                                <select name="" id="">
-                                    <option value="">50</option>
-                                </select>
+                            <div class="mpb_table">
+                                <div class="board_list mg_t0">
+                                    <table>
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>구분</th>
+                                                <th>제목</th>
+                                                <th>별점</th>
+                                                <th>작성자</th>
+                                                <th>작성일시</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="tc_blue">ID001</span></td>
+                                                <td class="fslh_0"><a href="" class="bl_link">여름에 만들어 본 인공눈으로</a></td>
+                                                <td class="fslh_0"><p class="ico_star"><i>★</i><span>4.5</span></p></td>
+                                                <td>한국과학기술정보연구원</td>
+                                                <td>2020.10.10 10:10:10</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fslh_0"><i class="ico_lab02"></i></td>
+                                                <td class="fslh_0"><a href="" class="bl_link">여름에 만들어 본 인공눈으로</a></td>
+                                                <td class="fslh_0"><p class="ico_star"><i>★</i><span>4.5</span></p></td>
+                                                <td>한국과학기술정보연구원</td>
+                                                <td>2020.10.10 10:10:10</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="tc_blue">ID001</span></td>
+                                                <td class="fslh_0"><a href="" class="bl_link">여름에 만들어 본 인공눈으로</a></td>
+                                                <td class="fslh_0"><p class="ico_star"><i>★</i><span>4.5</span></p></td>
+                                                <td>한국과학기술정보연구원</td>
+                                                <td>2020.10.10 10:10:10</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fslh_0"><i class="ico_lab02"></i></td>
+                                                <td class="fslh_0"><a href="" class="bl_link">여름에 만들어 본 인공눈으로</a></td>
+                                                <td class="fslh_0"><p class="ico_star"><i>★</i><span>4.5</span></p></td>
+                                                <td>한국과학기술정보연구원</td>
+                                                <td>2020.10.10 10:10:10</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fslh_0"><i class="ico_lab03"></i></td>
+                                                <td class="fslh_0"><a href="" class="bl_link">여름에 만들어 본 인공눈으로</a></td>
+                                                <td class="fslh_0"><p class="ico_star"><i>★</i><span>4.5</span></p></td>
+                                                <td>한국과학기술정보연구원</td>
+                                                <td>2020.10.10 10:10:10</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fslh_0"><i class="ico_lab04"></i></td>
+                                                <td class="fslh_0"><a href="" class="bl_link">여름에 만들어 본 인공눈으로</a></td>
+                                                <td class="fslh_0"><p class="ico_star"><i>★</i><span>4.5</span></p></td>
+                                                <td>한국과학기술정보연구원</td>
+                                                <td>2020.10.10 10:10:10</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
-                        </div>
-                        <div class="paging">
-                            <a href="" class="p_first" title="처음"><span class="hdn">처음페이지</span></a>
-                            <a href="" class="p_prev" title="이전"><span class="hdn">이전페이지</span></a>
-                            <strong>1</strong>
-                            <a href="">2</a>
-                            <a href="">3</a>
-                            <a href="">4</a>
-                            <a href="">5</a>
-                            <a href="">6</a>
-                            <a href="">7</a>
-                            <a href="">8</a>
-                            <a href="">9</a>
-                            <a href="" class="p_next" title="다음"><span class="hdn">다음페이지</span></a>
-                            <a href="" class="p_last" title="끝"><span class="hdn">끝페이지</span></a>
-                        </div>
-                        <div class="fl_r">
-                            <a href="" class="btn btn_sm btn_black"><span>다운로드</span><i class="ico_download"></i></a>
                         </div>
                     </div>
 
+                    <div class="m_panel m_panel_h">
+                        <div class="mp_t">
+                            <div class="fl_l"><h3>월별 회원수 변화</h3></div>
+                            <div class="fl_r">
+                                <div class="mpt_btns">
+                                    <a href="" class="mptb_ico_share"></a>
+                                    <a href="" class="mptb_ico_save"></a>
+                                    <a href="" class="mptb_ico_refresh"></a>
+                                    <a href="" class="mptb_ico_download"></a>
+                                    <a href="" class="mptb_ico_sort"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mp_b">
+                            <div class="mpb_chart" style="height:337px;">
+                                
+                                <canvas id="m_lineChart04"></canvas>
+                            </div>
+                            <div class="mpb_table">
+                                <div class="board_list mg_t16">
+                                    <table>
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>구분</th>
+                                                <th>제목</th>
+                                                <th>별점</th>
+                                                <th>작성자</th>
+                                                <th>작성일시</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="tc_blue">ID001</span></td>
+                                                <td class="fslh_0"><a href="" class="bl_link">여름에 만들어 본 인공눈으로</a></td>
+                                                <td class="fslh_0"><p class="ico_star"><i>★</i><span>4.5</span></p></td>
+                                                <td>한국과학기술정보연구원</td>
+                                                <td>2020.10.10 10:10:10</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fslh_0"><i class="ico_lab02"></i></td>
+                                                <td class="fslh_0"><a href="" class="bl_link">여름에 만들어 본 인공눈으로</a></td>
+                                                <td class="fslh_0"><p class="ico_star"><i>★</i><span>4.5</span></p></td>
+                                                <td>한국과학기술정보연구원</td>
+                                                <td>2020.10.10 10:10:10</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fslh_0"><i class="ico_lab03"></i></td>
+                                                <td class="fslh_0"><a href="" class="bl_link">여름에 만들어 본 인공눈으로</a></td>
+                                                <td class="fslh_0"><p class="ico_star"><i>★</i><span>4.5</span></p></td>
+                                                <td>한국과학기술정보연구원</td>
+                                                <td>2020.10.10 10:10:10</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fslh_0"><i class="ico_lab04"></i></td>
+                                                <td class="fslh_0"><a href="" class="bl_link">여름에 만들어 본 인공눈으로</a></td>
+                                                <td class="fslh_0"><p class="ico_star"><i>★</i><span>4.5</span></p></td>
+                                                <td>한국과학기술정보연구원</td>
+                                                <td>2020.10.10 10:10:10</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fslh_0"><i class="ico_lab03"></i></td>
+                                                <td class="fslh_0"><a href="" class="bl_link">여름에 만들어 본 인공눈으로</a></td>
+                                                <td class="fslh_0"><p class="ico_star"><i>★</i><span>4.5</span></p></td>
+                                                <td>한국과학기술정보연구원</td>
+                                                <td>2020.10.10 10:10:10</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fslh_0"><i class="ico_lab04"></i></td>
+                                                <td class="fslh_0"><a href="" class="bl_link">여름에 만들어 본 인공눈으로</a></td>
+                                                <td class="fslh_0"><p class="ico_star"><i>★</i><span>4.5</span></p></td>
+                                                <td>한국과학기술정보연구원</td>
+                                                <td>2020.10.10 10:10:10</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="m_chart">
+                        <div>
+                            <div class="m_panel m_panel_h">
+                                <div class="mp_t">
+                                    <div class="fl_l"><h3>월별 회원수 변화</h3></div>
+                                </div>
+                                <div class="mp_b">
+                                    <div class="mpb_chart" style="height:337px;">
+                                    
+                                        <canvas id="m_lineBarChart02"></canvas>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="m_panel m_panel_h">
+                                <div class="mp_t">
+                                    <div class="fl_l"><h3>월별 회원수 변화</h3></div>
+                                </div>
+                                <div class="mp_b">
+                                    <div class="mpb_chart" style="height:337px;">
+
+                                        <canvas id="m_lineBarChart03"></canvas>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -339,3 +339,12 @@
   </div>
 </body>
 </html>
+
+<script>
+    $(function(){      
+        mLineBarChart('m_lineBarChart01','#4677C2','#2959A4','triangle', WEEK_CHART3_data);  
+        mLineBarChart('m_lineBarChart02','#4677C2','#2959A4','triangle', WEEK_CHART3_data);  
+        mLineBarChart('m_lineBarChart03','#4677C2','#2959A4','triangle', WEEK_CHART3_data);  
+        mLineChart04();
+    });
+</script>

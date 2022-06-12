@@ -969,7 +969,7 @@ body {overflow:hidden; overflow-x:auto;}
 .board_list {margin-top:32px;}
 .board_list table {table-layout:fixed; width:100%; border-top:2px solid #0f3f88;}
 .board_list table th {font-size:14px; line-height:22px; border-bottom:1px solid #dfdfdf; color:#0f3f88; background:#f7f9fb; padding:12px 0;}
-.board_list table td {font-size:14px; line-height:22px; border-bottom:1px solid #dfdfdf; padding:12px 0; text-align:center; vertical-align:middle;}
+.board_list table td {font-size:14px; line-height:22px; border-bottom:1px solid #dfdfdf; padding:12px 0; text-align:center; vertical-align:middle; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
 .board_list table tbody tr:hover td {background:#fff0e8;}
 .board_list .bl_link {font-size:14px; line-height:22px; color:#222;}
 .board_list .ico_star i {font-size:18px; line-height:22px; color:#ffcb00; margin-right:4px;}
