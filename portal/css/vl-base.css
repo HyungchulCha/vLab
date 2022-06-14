@@ -1249,6 +1249,7 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 .modal.open {display:block;}
 .modal > div {display:inline-block; vertical-align:middle; text-align:left; position:relative; background:#fff; border:1px solid #666; border-radius:8px; max-height:100%; margin:0 auto; overflow:hidden;}
 .modal-lg > div {width:100%; max-width:1180px;}
+.modal-md > div {width:100%; max-width:800px;}
 .modal-sm > div {width:100%; max-width:640px;}
 .modal-xs > div {width:100%; max-width:480px;}
 

@@ -8,10 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="../css/vla-base.css">
+    <link rel="stylesheet" href="../css/vla-main.css">
 
     <script src="../js/jquery-3.4.2.min.js"></script>
     <script src="../js/jquery.throttle-debounce.min.js"></script>
+    <script src="../js/Chart.min.js"></script>
+    <script src="../js/chartjs-plugin-datalabels.min.js"></script>
     <script src="../js/vla-base.js"></script>
+    <script src="../js/vla-main.js"></script>
 
 </head>
 <body>
@@ -112,6 +116,215 @@
                         <div></div>
                     </div>
 
+                    <div class="m_number">
+                        <div><div class="d_va_m"><div><strong>23860</strong><span>일 방문 데이터</span></div></div></div>
+                        <div><div class="d_va_m"><div><strong>23860</strong><span>일 방문 데이터</span></div></div></div>
+                        <div><div class="d_va_m"><div><strong>23860</strong><span>일 방문 데이터</span></div></div></div>
+                    </div>
+
+                    <div class="m_panel m_panel_w">
+                        <div class="mp_t">
+                            <div class="fl_l"><h3>월별 회원수 변화</h3></div>
+                            <div class="fl_r">
+                                <div class="mpt_btns">
+                                    <a href="" class="mptb_ico_share"></a>
+                                    <a href="" class="mptb_ico_save"></a>
+                                    <a href="" class="mptb_ico_refresh"></a>
+                                    <a href="" class="mptb_ico_download"></a>
+                                    <a href="" class="mptb_ico_sort"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mp_b">
+                            <div class="mpb_chart" style="height:337px;">
+                                <canvas id="m_lineBarChart01"></canvas>
+                            </div>
+                            <div class="mpb_table">
+                                <div class="board_list mg_t0">
+                                    <table>
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>아이디</th>
+                                                <th>별명</th>
+                                                <th>출생년도</th>
+                                                <th>가입일시</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="tc_blue">ID001</span></td>
+                                                <td>홍길동</td>
+                                                <td>2009</td>
+                                                <td>2020.10.10</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="tc_blue">ID001</span></td>
+                                                <td>홍길동</td>
+                                                <td>2009</td>
+                                                <td>2020.10.10</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="tc_blue">ID001</span></td>
+                                                <td>홍길동</td>
+                                                <td>2009</td>
+                                                <td>2020.10.10</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="tc_blue">ID001</span></td>
+                                                <td>홍길동</td>
+                                                <td>2009</td>
+                                                <td>2020.10.10</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="tc_blue">ID001</span></td>
+                                                <td>홍길동</td>
+                                                <td>2009</td>
+                                                <td>2020.10.10</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="tc_blue">ID001</span></td>
+                                                <td>홍길동</td>
+                                                <td>2009</td>
+                                                <td>2020.10.10</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="m_panel m_panel_h">
+                        <div class="mp_t">
+                            <div class="fl_l"><h3>월별 회원수 변화</h3></div>
+                            <div class="fl_r">
+                                <div class="mpt_btns">
+                                    <a href="" class="mptb_ico_share"></a>
+                                    <a href="" class="mptb_ico_save"></a>
+                                    <a href="" class="mptb_ico_refresh"></a>
+                                    <a href="" class="mptb_ico_download"></a>
+                                    <a href="" class="mptb_ico_sort"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mp_b">
+                            <div class="mpb_chart" style="height:337px;">
+                                
+                                <canvas id="m_lineChart04"></canvas>
+                            </div>
+                            <div class="mpb_table">
+                                <div class="board_list mg_t16">
+                                    <table>
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>아이디</th>
+                                                <th>별명</th>
+                                                <th>출생년도</th>
+                                                <th>가입일시</th>
+                                                <th>이메일</th>
+                                                <th>지역</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="tc_blue">ID001</span></td>
+                                                <td>홍길동</td>
+                                                <td>2009</td>
+                                                <td>2020.10.10</td>
+                                                <td>ckgudcjf@gmail.com</td>
+                                                <td>대전광역시 유성구</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="tc_blue">ID001</span></td>
+                                                <td>홍길동</td>
+                                                <td>2009</td>
+                                                <td>2020.10.10</td>
+                                                <td>ckgudcjf@gmail.com</td>
+                                                <td>대전광역시 유성구</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="tc_blue">ID001</span></td>
+                                                <td>홍길동</td>
+                                                <td>2009</td>
+                                                <td>2020.10.10</td>
+                                                <td>ckgudcjf@gmail.com</td>
+                                                <td>대전광역시 유성구</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="tc_blue">ID001</span></td>
+                                                <td>홍길동</td>
+                                                <td>2009</td>
+                                                <td>2020.10.10</td>
+                                                <td>ckgudcjf@gmail.com</td>
+                                                <td>대전광역시 유성구</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="tc_blue">ID001</span></td>
+                                                <td>홍길동</td>
+                                                <td>2009</td>
+                                                <td>2020.10.10</td>
+                                                <td>ckgudcjf@gmail.com</td>
+                                                <td>대전광역시 유성구</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="tc_blue">ID001</span></td>
+                                                <td>홍길동</td>
+                                                <td>2009</td>
+                                                <td>2020.10.10</td>
+                                                <td>ckgudcjf@gmail.com</td>
+                                                <td>대전광역시 유성구</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="m_chart">
+                        <div>
+                            <div class="m_panel m_panel_h">
+                                <div class="mp_t">
+                                    <div class="fl_l"><h3>월별 회원수 변화</h3></div>
+                                </div>
+                                <div class="mp_b">
+                                    <div class="mpb_chart" style="height:337px;">
+                                    
+                                        <canvas id="m_lineBarChart02"></canvas>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="m_panel m_panel_h">
+                                <div class="mp_t">
+                                    <div class="fl_l"><h3>월별 회원수 변화</h3></div>
+                                </div>
+                                <div class="mp_b">
+                                    <div class="mpb_chart" style="height:337px;">
+
+                                        <canvas id="m_lineBarChart03"></canvas>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="lbr_b">
@@ -135,3 +348,12 @@
   </div>
 </body>
 </html>
+
+<script>
+    $(function(){      
+        mLineBarChart('m_lineBarChart01','#4677C2','#2959A4','triangle', WEEK_CHART3_data);  
+        mLineBarChart('m_lineBarChart02','#4677C2','#2959A4','triangle', WEEK_CHART3_data);  
+        mLineBarChart('m_lineBarChart03','#4677C2','#2959A4','triangle', WEEK_CHART3_data);  
+        mLineChart04();
+    });
+</script>

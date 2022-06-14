@@ -992,6 +992,10 @@ body {overflow:hidden; overflow-x:auto;}
 .board_edit .be_profile {font-size:0; line-height:0;}
 .board_edit .be_profile .bep_img {display:inline-block; width:128px; height:128px; border-radius:50%; background:url() #ddd no-repeat center center / cover; overflow:hidden; vertical-align:middle;}
 .board_edit .be_profile .bep_btns {display:inline-block; vertical-align:middle;}
+.board_edit .be_imglist {height:100%; padding:16px; overflow-y:auto;}
+.board_edit .be_imglist > ul > li ~ li {margin-top:8px;}
+.board_edit .be_imglist > ul > li > a {display:block;}
+.board_edit .be_imglist > ul > li > a > img {display:block; width:100%;}
 
 
 

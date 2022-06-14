@@ -27,6 +27,6 @@
 .m_panel.m_panel_w .mp_b .mpb_table {float:left; width:360px; padding-left:16px;}
 
 /* main chart */
-.m_chart {margin:0 -8px; margin-top:32px;}
+.m_chart {margin:0 -8px;}
 .m_chart::after {display:block; content:''; clear:both;}
 .m_chart > div {float:left; width:50%; padding:0 8px;}
