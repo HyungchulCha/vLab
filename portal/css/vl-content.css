@@ -615,3 +615,42 @@
 @media (max-width:767px) {
     .member {padding-top:24px;}
 }
+
+/* privacy */
+.privacy .anchor {border:1px solid #ddd; margin-top:32px;}
+.privacy .anchor::after {display:block; content:''; clear:both;}
+.privacy .anchor > ul > li > a {font-weight:700; color:#2564e7;}
+
+.privacy .cStyle2 {font-size:22px; line-height:30px; font-weight:700; color:#2564e7; margin-top:40px;}
+.privacy h5 {font-size:18px; line-height:26px; font-weight:700; margin-top:24px;}
+.privacy p {font-size:14px; line-height:22px; color:#444444; margin-top:8px;}
+.privacy ul {margin-top:8px;}
+.privacy li {position: relative; padding: 0 0 0 10px;    line-height: 21px;    font-size: 13px;    color: #888888; padding:2px 0; padding-left:10px;}
+.privacy li::before {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 0;
+      width: 5px;
+      height: 1px;
+      background: #000;
+    }
+
+@media (min-width:1180px) {
+    .privacy .anchor {padding:24px 0;}
+    .privacy .anchor > ul {float:left; width:50%; padding:0 32px;}
+    .privacy .anchor > ul > li {padding:8px 0;}
+    .privacy .anchor > ul > li > a {font-size:16px; line-height:24px;}
+}
+@media (min-width:768px) and (max-width:1179px) {
+    .privacy .anchor {padding:16px 0;}
+    .privacy .anchor > ul {padding:0 24px;}
+    .privacy .anchor > ul > li {padding:6px 0;}
+    .privacy .anchor > ul > li > a {font-size:14px; line-height:22px;}
+}
+@media (max-width:767px) {
+    .privacy .anchor {padding:8px 0;}
+    .privacy .anchor > ul {padding:0 16px;}
+    .privacy .anchor > ul > li {padding:4px 0;}
+    .privacy .anchor > ul > li > a {font-size:12px; line-height:20px;}
+}
