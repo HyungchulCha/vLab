@@ -728,7 +728,7 @@ function popupLabHeaderTgl() {
 
     if (pl.length > 0) {
 
-        sCheck() === 'p' ? plh.removeClass('over') : plh.addClass('over');
+        sCheck() === 'p' ? (plh.addClass('over'), setTimeout(function(){plh.removeClass('over')}, 2000)) : plh.addClass('over');
 
         plh.on('mouseenter', function(){
             if (sCheck() === 'p') {

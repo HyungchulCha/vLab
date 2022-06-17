@@ -199,6 +199,8 @@
 .lab_view .lv_t .lvt_tag_07 {background:#774fff;}
 .lab_view .lv_t .lvt_title {margin-top:16px;}
 .lab_view .lv_t .lvt_title span {display:block; line-height:1.4em; max-height:2.8em; font-weight:700; color:#fff; overflow:hidden;}
+.lab_view .lv_t .lvt_sub_title {margin-top:8px;}
+.lab_view .lv_t .lvt_sub_title span {display:block; line-height:1.4em; max-height:2.8em; color:#fff; overflow:hidden; opacity:0.8}
 .lab_view .lv_t .lvt_class {margin-top:16px;}
 .lab_view .lv_t .lvt_class > ul {margin:-4px -12px;}
 .lab_view .lv_t .lvt_class > ul > li {position:relative; display:inline-block; padding:4px 12px;}
@@ -219,14 +221,17 @@
     .lab_view .lv_t > div > div:first-child {width:50%;}
     .lab_view .lv_t > div > div:last-child {padding:48px 64px;}
     .lab_view .lv_t .lvt_title span {font-size:36px;}
+    .lab_view .lv_t .lvt_sub_title span {font-size:20px;}
 }
 @media (min-width:768px) and (max-width:1179px) {
     .lab_view .lv_t > div > div:last-child {padding:40px 24px;}
     .lab_view .lv_t .lvt_title span {font-size:30px;}
+    .lab_view .lv_t .lvt_sub_title span {font-size:18px;}
 }
 @media (max-width:767px) {
     .lab_view .lv_t > div > div:last-child {padding:32px 16px;}
     .lab_view .lv_t .lvt_title span {font-size:24px;}
+    .lab_view .lv_t .lvt_sub_title span {font-size:16px;}
 }
 
 /* lab view bottom */
