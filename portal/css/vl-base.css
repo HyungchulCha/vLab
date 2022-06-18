@@ -563,6 +563,10 @@ a, a:focus, a:hover {text-decoration:none;}
 .btn_xs.btn_gray .ico_exchange {background:url(../image/common/ico_exchange_64_b.png) no-repeat center center / 100%;}
 .btn_sm.btn_blue .ico_download {background:url(../image/common/ico_download_64_w.png) no-repeat center center / 100%;}
 .btn_sm.btn_gray .ico_delete {background:url(../image/common/ico_delete_64_b.png) no-repeat center center / 100%;}
+.btn_sm.btn_gray .ico_add {background:url(../image/common/ico_add_64_b.png) no-repeat center center / 80%; height:22px;}
+.btn_sm.btn_gray .ico_remove {background:url(../image/common/ico_remove_64_b.png) no-repeat center center / 80%; height:22px;}
+
+.btn_sm.only_ico {width:44px; padding-left:0; padding-right:0; text-align:center;}
 
 /* form */
 input[type="text"], input[type="password"], input[type="date"], input[type="email"], input[type="number"], input[type="search"], input[type="checkbox"], input[type="radio"], textarea, select, label, button {display:inline-block; margin:0; padding:0; font-family:'NanumSquare', 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; font-weight:400; letter-spacing:-0.024em; vertical-align:middle;}
