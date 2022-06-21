@@ -694,3 +694,19 @@
     .error .e_title_en {font-size:14px; margin-top:4px;}
     .error .e_descript {margin-top:16px;}
 }
+
+/* introduction */
+.introduction {max-width:1180px; margin:0 auto;}
+.introduction .intro_title > * {display:inline-block; vertical-align:middle;}
+.introduction .intro_title > i {width:179px; height:41px; background:url(../image/common/intro_logo.png) no-repeat left center / auto 100%;}
+.introduction .intro_title > span {font-size:36px; line-height:44px; font-weight:800; color:#fff; margin-left:8px;}
+
+@media (min-width:1180px) {
+    .introduction {margin-top:64px; margin-bottom:64px; height:900px; background:url(../image/common/intro_bg_w.png) no-repeat center center / auto 100%; padding:64px;}
+}
+@media (min-width:768px) and (max-width:1179px) {
+    .introduction {height:860px; background:url(../image/common/intro_bg_tm.png) no-repeat right -120px bottom -140px; padding:64px; text-align:center;}
+}
+@media (max-width:767px) {
+    .introduction {height:860px; background:url(../image/common/intro_bg_tm.png) no-repeat right -120px bottom -140px; padding:48px; text-align:center;}
+}

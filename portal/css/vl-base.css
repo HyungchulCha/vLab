@@ -466,6 +466,7 @@ a, a:focus, a:hover {text-decoration:none;}
 .tc_80c437	{color:#80c437 !important;}
 .tc_9999a1	{color:#9999a1 !important;}
 .tc_2564e7	{color:#2564e7 !important;}
+.tc_ffffff	{color:#ffffff !important;}
 
 /* text decoration underline */
 .td_underline_9999a1	{border-bottom:1px solid #9999a1;}
@@ -513,7 +514,7 @@ a, a:focus, a:hover {text-decoration:none;}
 .btn_navy		{background:#50505f; color:#fff;}
 .btn_black		{background:#333333; color:#fff;}
 .btn_gray		{background:#eeeeee; color:#3a394a;}
-.btn_white		{background:#ffffff; color:#3a394a;}
+.btn_white		{background:#ffffff; color:#047be0;}
 .btn_disable	{background:#cccccc; color:#fff;}
 
 .btn_line_red		{border-color:#e73132; color:#e73132;}
