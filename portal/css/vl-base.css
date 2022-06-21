@@ -1123,9 +1123,10 @@ a, button, input[type="button"], input[type="image"], input[type="submit"] {curs
 .sub_top .st_title h2 {display:inline-block; font-weight:800; color:#fff; letter-spacing:0.48em;}
 .sub_top .lnb > div {max-width:1180px; margin:0 auto;}
 .sub_top .lnb > div > ul {display:table; table-layout:fixed; width:100%;}
-.sub_top .lnb > div > ul > li {display:table-cell; position:relative;}
+.sub_top .lnb > div > ul > li {display:table-cell; position:relative; vertical-align:middle;}
 .sub_top .lnb > div > ul > li.on::before {display:block; content:''; width:100%; height:3px; background:#2cb4ff; position:absolute; left:0; bottom:-1px;}
-.sub_top .lnb > div > ul > li > a {display:block; font-weight:700; color:#333;}
+.sub_top .lnb > div > ul > li > a {display:inline-block; font-weight:700; color:#333; width:100%;}
+.sub_top .lnb .ll_logo {display:inline-block; width:72px; height:16px; background:url(../image/common/ll_logo.png) no-repeat left center / auto 100%; vertical-align:middle; margin-right:4px;}
 
 @media (min-width:1180px) {
 	.sub_top .st_title {padding:64px 0;}
