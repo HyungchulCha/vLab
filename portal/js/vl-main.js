@@ -25,6 +25,8 @@ var listen = true;
 
 $('html').on('mousewheel DOMMouseScroll', function (e, delta) {
     var offTop = $(window).outerHeight() - $('.header').outerHeight();
+    var isOfh = $('body').hasClass('of_h');
+    if (isOfh) return;
     if (e.offsetY > offTop) return;
     if (delta > 0) return;
     if (!listen) return;
